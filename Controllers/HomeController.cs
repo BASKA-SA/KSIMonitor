@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using KSIMonitor.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace KSIMonitor.Controllers {
     public class HomeController : Controller {
