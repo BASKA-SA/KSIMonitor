@@ -1,7 +1,10 @@
 namespace KSIMonitor.Models {
     public class ErrorViewModel {
-        public string RequestId { get; set; }
+        public string RequestID { get; set; }
+        public string ExceptionMessage { get; set; }
+        public string ExceptionFull { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public bool ShowRequestID => !string.IsNullOrEmpty(RequestID);
+        public bool ShowExceptionMessage => !string.IsNullOrEmpty(ExceptionMessage);
     }
 }
