@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 # KSIMonitor ignores
 appsettings.Development.json
+package-lock.json
