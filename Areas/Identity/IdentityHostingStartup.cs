@@ -9,6 +9,9 @@ namespace KSIMonitor.Areas.Identity {
     public class IdentityHostingStartup : IHostingStartup {
         public void Configure(IWebHostBuilder builder) {
             builder.ConfigureServices((context, services) => {
+                // EmailSender already exists, but under KSIMonitor.Services.IEmailSender. Add it as implementing Identity.UI version
+                services.AddTransient<Microsoft.AspNetCore.Identity.UI.Services.IEmailSender, Services.EmailSender>();
+
                 services.AddDbContext<Data.ApplicationDBContext>(options =>
                     options.UseSqlServer(context.Configuration.GetConnectionString("KSIMonitorAppDB")));
 

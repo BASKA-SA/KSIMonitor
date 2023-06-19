@@ -1,3 +1,4 @@
+using KSIMonitor.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -16,6 +17,9 @@ namespace KSIMonitor {
         public void ConfigureServices(IServiceCollection services) {
             services.AddLogging(builder => builder.AddConfiguration(Configuration));
             services.AddControllersWithViews();
+
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<EmailSenderOptions>(Configuration.GetSection(EmailSenderOptions.SectionName));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
