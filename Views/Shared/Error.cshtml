@@ -16,6 +16,8 @@
         <strong>Error Message:</strong> <code>@Model.ExceptionMessage</code>
     </p>
 }
-<p>
-    <strong>Full Exception:</strong> <pre>@Model.ExceptionFull</pre>
-</p>
+@if (User.IsInRole(Program.RoleNameRoleAdmin)) {
+    <p>
+        <strong>Full Exception:</strong> <pre>@Model.ExceptionFull</pre>
+    </p>
+}

@@ -13,5 +13,8 @@ namespace KSIMonitor {
 
 
         public const string AppName = "KSI Monitor";
+
+        public const string RoleNameRoleAdmin = "RoleAdmin";
+        public const string RoleNameUser = "User";
     }
 }
