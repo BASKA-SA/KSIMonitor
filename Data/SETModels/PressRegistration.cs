@@ -5,43 +5,29 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("press_registration")]
     public partial class PressRegistration {
-        [Key]
-        [Column("id")]
-        public uint Id { get; set; }
-        [Required]
-        [Column("firstname")]
-        [StringLength(150)]
+        [Column("id"), Key]
+        public uint ID { get; set; }
+        [Column("firstname"), Required, StringLength(150)]
         public string Firstname { get; set; }
-        [Required]
-        [Column("lastname")]
-        [StringLength(150)]
+        [Column("lastname"), Required, StringLength(150)]
         public string Lastname { get; set; }
-        [Required]
-        [Column("medianame")]
-        [StringLength(255)]
+        [Column("medianame"), Required, StringLength(255)]
         public string Medianame { get; set; }
         [Column("type")]
         public int Type { get; set; }
-        [Column("othertype")]
-        [StringLength(150)]
+        [Column("othertype"), StringLength(150)]
         public string Othertype { get; set; }
         [Column("functionname")]
         public int Functionname { get; set; }
-        [Column("otherfunction")]
-        [StringLength(255)]
+        [Column("otherfunction"), StringLength(255)]
         public string Otherfunction { get; set; }
-        [Column("pressid")]
-        [StringLength(150)]
-        public string Pressid { get; set; }
-        [Required]
-        [Column("email")]
-        [StringLength(255)]
+        [Column("pressid"), StringLength(150)]
+        public string PressID { get; set; }
+        [Column("email"), Required, StringLength(255)]
         public string Email { get; set; }
-        [Column("phone")]
-        [StringLength(100)]
+        [Column("phone"), StringLength(100)]
         public string Phone { get; set; }
-        [Column("mobile")]
-        [StringLength(100)]
+        [Column("mobile"), StringLength(100)]
         public string Mobile { get; set; }
         [Column("countryid")]
         public int Countryid { get; set; }
@@ -57,8 +43,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Accprinted { get; set; }
         [Column("accprintedtime", TypeName = "timestamp")]
         public DateTime? Accprintedtime { get; set; }
-        [Column("acccustom")]
-        [StringLength(255)]
+        [Column("acccustom"), StringLength(255)]
         public string Acccustom { get; set; }
     }
 }

@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("referee_matcharea")]
+    [Table("referee_matcharea"), Keyless]
     public partial class RefereeMatcharea {
         [Column("vernr")]
         public int Vernr { get; set; }

@@ -4,12 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("press_function")]
     public partial class PressFunction {
-        [Key]
-        [Column("id")]
+        [Column("id"), Key]
         public int Id { get; set; }
-        [Required]
-        [Column("name")]
-        [StringLength(150)]
+        [Column("name"), Required, StringLength(150)]
         public string Name { get; set; }
     }
 }

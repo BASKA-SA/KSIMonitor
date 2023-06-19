@@ -4,8 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("poolsiegereinzel")]
+    [Table("poolsiegereinzel"), Keyless]
     public partial class Poolsiegereinzel {
         [Column("vernr")]
         public int Vernr { get; set; }
@@ -27,9 +26,8 @@ namespace KSIMonitor.Data.SETModels {
         public int? Points { get; set; }
         [Column("kata")]
         public int? Kata { get; set; }
-        [Column("matchid")]
-        [StringLength(50)]
-        public string Matchid { get; set; }
+        [Column("matchid"), StringLength(50)]
+        public string MatchID { get; set; }
         [Column("matchtime", TypeName = "timestamp")]
         public DateTime Matchtime { get; set; }
         [Column("wintype")]

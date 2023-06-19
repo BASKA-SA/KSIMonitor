@@ -4,8 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("nennungeneinzel")]
+    [Table("nennungeneinzel"), Keyless]
     public partial class Nennungeneinzel {
         [Column("vernr")]
         public int Vernr { get; set; }
@@ -33,8 +32,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Accprinted { get; set; }
         [Column("accprintedtime", TypeName = "timestamp")]
         public DateTime? Accprintedtime { get; set; }
-        [Column("acccustom")]
-        [StringLength(255)]
+        [Column("acccustom"), StringLength(255)]
         public string Acccustom { get; set; }
         [Column("regdob", TypeName = "date")]
         public DateTime? Regdob { get; set; }

@@ -3,15 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("personemail")]
+    [Table("personemail"), Keyless]
     public partial class Personemail {
         [Column("persontype")]
         public int Persontype { get; set; }
         [Column("id")]
-        public int Id { get; set; }
-        [Required]
-        [Column("email")]
+        public int ID { get; set; }
+        [Column("email"), Required]
         [StringLength(255)]
         public string Email { get; set; }
         [Column("isaddress")]

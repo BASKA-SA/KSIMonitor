@@ -4,9 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("nennungenteam")]
-    [Index("Teamid", Name = "teamid", IsUnique = true)]
+    [Table("nennungenteam"), Keyless, Index(nameof(TeamID), Name = "teamid", IsUnique = true)]
     public partial class Nennungenteam {
         [Column("vernr")]
         public int Vernr { get; set; }
@@ -24,6 +22,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("registrator")]
         public int? Registrator { get; set; }
         [Column("teamid")]
-        public int Teamid { get; set; }
+        public int TeamID { get; set; }
     }
 }

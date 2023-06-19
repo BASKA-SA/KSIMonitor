@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("officialcat_access")]
+    [Table("officialcat_access"), Keyless]
     public partial class OfficialcatAccess {
         [Column("vernr")]
         public int Vernr { get; set; }

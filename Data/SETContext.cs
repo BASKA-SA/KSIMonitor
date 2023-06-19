@@ -243,7 +243,7 @@ namespace KSIMonitor.Data {
             });
 
             modelBuilder.Entity<Nennungenteam>(entity => {
-                entity.Property(e => e.Teamid).ValueGeneratedOnAdd();
+                entity.Property(e => e.TeamID).ValueGeneratedOnAdd();
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
@@ -252,7 +252,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Geburt).HasDefaultValueSql("'1000-01-01'");
                 entity.Property(e => e.Geschlecht).IsFixedLength();
                 entity.Property(e => e.Sichtbar).HasDefaultValueSql("'1'");
-                entity.Property(e => e.Titel).HasDefaultValueSql("''");
+                entity.Property(e => e.Title).HasDefaultValueSql("''");
             });
 
             modelBuilder.Entity<Personemail>(entity => {
@@ -303,7 +303,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Kyu).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Lizenznr).HasDefaultValueSql("''");
                 entity.Property(e => e.Sichtbar).HasDefaultValueSql("'1'");
-                entity.Property(e => e.Titel).HasDefaultValueSql("''");
+                entity.Property(e => e.Title).HasDefaultValueSql("''");
             });
 
             modelBuilder.Entity<RefereeExam>(entity => {

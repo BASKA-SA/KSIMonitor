@@ -4,12 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("official_category")]
     public partial class OfficialCategory {
-        [Key]
-        [Column("id")]
-        public int Id { get; set; }
-        [Required]
-        [Column("bezeichnung")]
-        [StringLength(255)]
+        [Column("id"), Key]
+        public int ID { get; set; }
+        [Column("bezeichnung"), Required, StringLength(255)]
         public string Bezeichnung { get; set; }
     }
 }
