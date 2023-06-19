@@ -4,19 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("clientmonitor")]
+    [Table("clientmonitor"), Keyless]
     public partial class Clientmonitor {
-        [Required]
-        [Column("ip")]
-        [StringLength(30)]
-        public string Ip { get; set; }
-        [Required]
-        [Column("hostname")]
-        [StringLength(100)]
+        [Column("ip"), Required, StringLength(30)]
+        public string IP { get; set; }
+        [Column("hostname"), Required, StringLength(100)]
         public string Hostname { get; set; }
-        [Column("name")]
-        [StringLength(100)]
+        [Column("name"), StringLength(100)]
         public string Name { get; set; }
         [Column("creation", TypeName = "timestamp")]
         public DateTime Creation { get; set; }
@@ -25,21 +19,20 @@ namespace KSIMonitor.Data.SETModels {
         [Column("message", TypeName = "text")]
         public string Message { get; set; }
         [Column("verid")]
-        public int Verid { get; set; }
+        public int VerID { get; set; }
         [Column("type")]
         public int Type { get; set; }
         [Column("ms")]
-        public int? Ms { get; set; }
-        [Column("matchid")]
-        [StringLength(50)]
-        public string Matchid { get; set; }
+        public int? MS { get; set; }
+        [Column("matchid"), StringLength(50)]
+        public string MatchID { get; set; }
         [Column("nameid1")]
-        public int? Nameid1 { get; set; }
+        public int? NameID1 { get; set; }
         [Column("nameid2")]
-        public int? Nameid2 { get; set; }
+        public int? NameID2 { get; set; }
         [Column("sync")]
         public int? Sync { get; set; }
         [Column("clientmode")]
-        public int? Clientmode { get; set; }
+        public int? ClientMode { get; set; }
     }
 }

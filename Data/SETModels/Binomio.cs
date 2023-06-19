@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("binomio")]
     public partial class Binomio {
-        [Key]
-        [Column("id")]
-        public int Id { get; set; }
+        [Column("id"), Key]
+        public int ID { get; set; }
         [Column("conduttore")]
         public int Conduttore { get; set; }
         [Column("cane")]
@@ -25,20 +24,15 @@ namespace KSIMonitor.Data.SETModels {
         public int Kanito { get; set; }
         [Column("sichtbar")]
         public int Sichtbar { get; set; }
-        [Column("gradosdsfreestyle")]
-        [StringLength(50)]
+        [Column("gradosdsfreestyle"), StringLength(50)]
         public string Gradosdsfreestyle { get; set; }
-        [Column("gradosdsspeedwater")]
-        [StringLength(50)]
+        [Column("gradosdsspeedwater"), StringLength(50)]
         public string Gradosdsspeedwater { get; set; }
-        [Column("gradosdssplashdog")]
-        [StringLength(50)]
+        [Column("gradosdssplashdog"), StringLength(50)]
         public string Gradosdssplashdog { get; set; }
-        [Column("gradosdsobedience")]
-        [StringLength(50)]
+        [Column("gradosdsobedience"), StringLength(50)]
         public string Gradosdsobedience { get; set; }
-        [Column("gradosdshoopers")]
-        [StringLength(50)]
+        [Column("gradosdshoopers"), StringLength(50)]
         public string Gradosdshoopers { get; set; }
     }
 }

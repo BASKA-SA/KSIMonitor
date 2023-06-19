@@ -4,12 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("exam")]
     public partial class Exam {
-        [Key]
-        [Column("id")]
+        [Column("id"), Key]
         public int Id { get; set; }
-        [Required]
-        [Column("title")]
-        [StringLength(255)]
+        [Column("title"), Required, StringLength(255)]
         public string Title { get; set; }
         [Column("theoreticalexam")]
         public int Theoreticalexam { get; set; }

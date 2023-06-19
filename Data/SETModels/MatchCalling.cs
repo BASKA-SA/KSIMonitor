@@ -4,15 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("match_calling")]
+    [Table("match_calling"), Keyless]
     public partial class MatchCalling {
         [Column("eventid")]
-        public int Eventid { get; set; }
+        public int EventID { get; set; }
         [Column("matchnumber")]
         public int Matchnumber { get; set; }
         [Column("catid")]
-        public int Catid { get; set; }
+        public int CatID { get; set; }
         [Column("pool")]
         public int Pool { get; set; }
         [Column("fieldpos")]
@@ -49,11 +48,9 @@ namespace KSIMonitor.Data.SETModels {
         public int? Ring { get; set; }
         [Column("winner")]
         public int? Winner { get; set; }
-        [Column("winner_by")]
-        [StringLength(15)]
+        [Column("winner_by"), StringLength(15)]
         public string WinnerBy { get; set; }
-        [Column("result")]
-        [StringLength(15)]
+        [Column("result"), StringLength(15)]
         public string Result { get; set; }
         [Column("matchfromprinted")]
         public int Matchfromprinted { get; set; }

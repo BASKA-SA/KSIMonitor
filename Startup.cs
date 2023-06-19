@@ -27,6 +27,9 @@ namespace KSIMonitor {
 
             services.AddDbContext<IApplicationDBContext, ApplicationDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("KSIMonitorAppDB")));
+
+            services.AddDbContext<SETContext>(options =>
+                options.UseMySQL(Configuration.GetConnectionString("SET_DB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

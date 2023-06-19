@@ -3,8 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("ergebniseinzel")]
+    [Table("ergebniseinzel"), Keyless]
     public partial class Ergebniseinzel {
         [Column("vernr")]
         public int Vernr { get; set; }
@@ -18,8 +17,7 @@ namespace KSIMonitor.Data.SETModels {
         public int? Done { get; set; }
         [Column("ergreal")]
         public int Ergreal { get; set; }
-        [Column("comment")]
-        [StringLength(255)]
+        [Column("comment"), StringLength(255)]
         public string Comment { get; set; }
     }
 }

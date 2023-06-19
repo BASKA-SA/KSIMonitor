@@ -3,14 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("barcode")]
+    [Table("barcode"), Keyless]
     public partial class Barcode {
         [Column("verid")]
         public int Verid { get; set; }
-        [Required]
-        [Column("barcode")]
-        [StringLength(50)]
+        [Column("barcode"), Required, StringLength(50)]
         public string Barcode1 { get; set; }
         [Column("id")]
         public int Id { get; set; }

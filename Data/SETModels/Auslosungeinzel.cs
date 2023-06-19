@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("auslosungeinzel")]
+    [Table("auslosungeinzel"), Keyless]
     public partial class Auslosungeinzel {
         [Column("vernr")]
         public int Vernr { get; set; }

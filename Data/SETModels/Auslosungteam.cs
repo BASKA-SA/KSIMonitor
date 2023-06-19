@@ -3,8 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("auslosungteam")]
+    [Table("auslosungteam"), Keyless]
     public partial class Auslosungteam {
         [Column("vernr")]
         public int Vernr { get; set; }
@@ -12,8 +11,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Knr { get; set; }
         [Column("vereinnr")]
         public int Vereinnr { get; set; }
-        [Required]
-        [Column("mannschaft", TypeName = "text")]
+        [Column("mannschaft", TypeName = "text"), Required]
         public string Mannschaft { get; set; }
         [Column("pos")]
         public int Pos { get; set; }

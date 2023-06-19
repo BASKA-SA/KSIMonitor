@@ -4,13 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("entryfeemodel")]
     public partial class Entryfeemodel {
-        [Key]
-        [Column("id")]
-        public int Id { get; set; }
+        [Column("id"), Key]
+        public int ID { get; set; }
         [Column("model")]
         public int Model { get; set; }
         [Column("verid")]
-        public int Verid { get; set; }
+        public int VerID { get; set; }
         [Column("discountentry")]
         public int Discountentry { get; set; }
         [Column("discount")]

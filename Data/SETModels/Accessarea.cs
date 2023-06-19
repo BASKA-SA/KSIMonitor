@@ -4,12 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("accessarea")]
     public partial class Accessarea {
-        [Key]
-        [Column("accnr")]
+        [Key, Column("accnr")]
         public int Accnr { get; set; }
-        [Required]
-        [Column("bezeichnung")]
-        [StringLength(255)]
+        [Required, Column("bezeichnung"), StringLength(255)]
         public string Bezeichnung { get; set; }
     }
 }

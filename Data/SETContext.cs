@@ -5,7 +5,7 @@ namespace KSIMonitor.Data {
     public partial class SETContext : DbContext, IDBContext {
         public SETContext(DbContextOptions<SETContext> options) : base(options) { }
 
-        public virtual DbSet<Accessarea> Accessareas { get; set; }
+        public virtual DbSet<Accessarea> AccessAreas { get; set; }
         public virtual DbSet<Auslosungeinzel> Auslosungeinzels { get; set; }
         public virtual DbSet<Auslosungteam> Auslosungteams { get; set; }
         public virtual DbSet<Barcode> Barcodes { get; set; }
@@ -23,7 +23,7 @@ namespace KSIMonitor.Data {
         public virtual DbSet<Ergebnisteam> Ergebnisteams { get; set; }
         public virtual DbSet<Exam> Exams { get; set; }
         public virtual DbSet<Kategorie> Kategories { get; set; }
-        public virtual DbSet<Katum> Kata { get; set; }
+        public virtual DbSet<Kata> Kata { get; set; }
         public virtual DbSet<Landesverband> Landesverbands { get; set; }
         public virtual DbSet<MatchCalling> MatchCallings { get; set; }
         public virtual DbSet<Matchinfo> Matchinfos { get; set; }
@@ -118,10 +118,10 @@ namespace KSIMonitor.Data {
             });
 
             modelBuilder.Entity<Clientmonitor>(entity => {
-                entity.Property(e => e.Clientmode).HasDefaultValueSql("'1'");
+                entity.Property(e => e.ClientMode).HasDefaultValueSql("'1'");
                 entity.Property(e => e.Creation).ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Expire).HasDefaultValueSql("'1970-01-01 02:00:01'");
-                entity.Property(e => e.Ms).HasDefaultValueSql("'0'");
+                entity.Property(e => e.MS).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Sync).HasDefaultValueSql("'0'");
             });
 
@@ -132,7 +132,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Geschlecht).IsFixedLength();
                 entity.Property(e => e.Kyu).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Sichtbar).HasDefaultValueSql("'1'");
-                entity.Property(e => e.Titel).HasDefaultValueSql("''");
+                entity.Property(e => e.Title).HasDefaultValueSql("''");
             });
 
             modelBuilder.Entity<Doubleeliminationeinzel>(entity => {
@@ -178,7 +178,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Typ).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Katum>(entity => {
+            modelBuilder.Entity<Kata>(entity => {
                 entity.Property(e => e.Stilnr).HasDefaultValueSql("'1'");
             });
 
@@ -204,7 +204,7 @@ namespace KSIMonitor.Data {
 
             modelBuilder.Entity<Name>(entity => {
                 entity.HasKey(e => e.Nnr).HasName("PRIMARY");
-                entity.Property(e => e.Accountenabled).HasDefaultValueSql("'0'");
+                entity.Property(e => e.AccountEnabled).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Dan).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Email).HasDefaultValueSql("''");
                 entity.Property(e => e.Geburt).HasDefaultValueSql("'1000-01-01'");
@@ -221,7 +221,7 @@ namespace KSIMonitor.Data {
             modelBuilder.Entity<Nation>(entity => {
                 entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
                 entity.Property(e => e.Hide).HasDefaultValueSql("'0'");
-                entity.Property(e => e.Iso).HasDefaultValueSql("''");
+                entity.Property(e => e.ISO).HasDefaultValueSql("''");
             });
 
             modelBuilder.Entity<Nennungencoach>(entity => {
