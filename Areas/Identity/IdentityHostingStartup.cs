@@ -16,7 +16,10 @@ namespace KSIMonitor.Areas.Identity {
                 services.AddDbContext<Data.ApplicationDBContext>(options =>
                     options.UseSqlServer(context.Configuration.GetConnectionString("KSIMonitorAppDB")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Data.ApplicationDBContext>();
+                services.AddIdentity<IdentityUser, IdentityRole>(options => {
+                    options.User.RequireUniqueEmail = true;
+                    options.SignIn.RequireConfirmedAccount = true; //                           .AddDefaultUI is required for some files that are not scaffolded, see https://stackoverflow.com/a/65017563/2999220
+                }).AddEntityFrameworkStores<Data.ApplicationDBContext>().AddDefaultTokenProviders().AddDefaultUI();
             });
         }
     }
