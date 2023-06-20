@@ -4,15 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("trostrundeteam")]
+    [Table("trostrundeteam"), Keyless]
     public partial class Trostrundeteam {
         [Column("id")]
         public long Id { get; set; }
         [Column("vereinnr")]
         public int Vereinnr { get; set; }
-        [Required]
-        [Column("mannschaft", TypeName = "text")]
+        [Column("mannschaft", TypeName = "text"), Required]
         public string Mannschaft { get; set; }
         [Column("fieldpos")]
         public int Fieldpos { get; set; }
@@ -22,8 +20,7 @@ namespace KSIMonitor.Data.SETModels {
         public int? Points { get; set; }
         [Column("kata")]
         public int? Kata { get; set; }
-        [Column("matchid")]
-        [StringLength(50)]
+        [Column("matchid"), StringLength(50)]
         public string Matchid { get; set; }
         [Column("matchtime", TypeName = "timestamp")]
         public DateTime Matchtime { get; set; }

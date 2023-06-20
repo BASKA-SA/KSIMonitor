@@ -5,24 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("veranstaltung")]
     public partial class Veranstaltung {
-        [Key]
-        [Column("vernr")]
+        [Column("vernr"), Key]
         public int Vernr { get; set; }
-        [Required]
-        [Column("bezeichnung")]
-        [StringLength(255)]
+        [Column("bezeichnung"), Required, StringLength(255)]
         public string Bezeichnung { get; set; }
-        [Required]
-        [Column("verdatum")]
-        [StringLength(20)]
+        [Column("verdatum"), Required, StringLength(20)]
         public string Verdatum { get; set; }
-        [Required]
-        [Column("nennstart")]
-        [StringLength(20)]
+        [Column("nennstart"), Required, StringLength(20)]
         public string Nennstart { get; set; }
-        [Required]
-        [Column("nennende")]
-        [StringLength(20)]
+        [Column("nennende"), Required, StringLength(20)]
         public string Nennende { get; set; }
         [Column("user")]
         public int? User { get; set; }
@@ -30,8 +21,7 @@ namespace KSIMonitor.Data.SETModels {
         public uint Gesperrt { get; set; }
         [Column("info", TypeName = "text")]
         public string Info { get; set; }
-        [Column("passwd")]
-        [StringLength(50)]
+        [Column("passwd"), StringLength(50)]
         public string Passwd { get; set; }
         [Column("offen")]
         public int? Offen { get; set; }
@@ -39,8 +29,7 @@ namespace KSIMonitor.Data.SETModels {
         public int? Showstarter { get; set; }
         [Column("regmode")]
         public int? Regmode { get; set; }
-        [Column("adresse")]
-        [StringLength(255)]
+        [Column("adresse"), StringLength(255)]
         public string Adresse { get; set; }
         [Column("auslosungen")]
         public int? Auslosungen { get; set; }
@@ -56,11 +45,9 @@ namespace KSIMonitor.Data.SETModels {
         public int Waehrung { get; set; }
         [Column("typ")]
         public int? Typ { get; set; }
-        [Column("lat")]
-        [StringLength(50)]
+        [Column("lat"), StringLength(50)]
         public string Lat { get; set; }
-        [Column("lon")]
-        [StringLength(50)]
+        [Column("lon"), StringLength(50)]
         public string Lon { get; set; }
         [Column("liveblog")]
         public int Liveblog { get; set; }
@@ -70,21 +57,17 @@ namespace KSIMonitor.Data.SETModels {
         public int Teamlimitclub { get; set; }
         [Column("usepaypal")]
         public int? Usepaypal { get; set; }
-        [Column("paypalaccount")]
-        [StringLength(255)]
+        [Column("paypalaccount"), StringLength(255)]
         public string Paypalaccount { get; set; }
         [Column("paypalnoamount")]
         public int? Paypalnoamount { get; set; }
-        [Column("systemtype")]
-        [StringLength(150)]
+        [Column("systemtype"), StringLength(150)]
         public string Systemtype { get; set; }
-        [Column("bisdatum")]
-        [StringLength(20)]
+        [Column("bisdatum"), StringLength(20)]
         public string Bisdatum { get; set; }
         [Column("hidefromcalendar")]
         public int? Hidefromcalendar { get; set; }
-        [Column("googlecalid")]
-        [StringLength(250)]
+        [Column("googlecalid"), StringLength(250)]
         public string Googlecalid { get; set; }
         [Column("invoiced")]
         public int? Invoiced { get; set; }
@@ -96,15 +79,13 @@ namespace KSIMonitor.Data.SETModels {
         public int Infoevent { get; set; }
         [Column("useothercutoffday")]
         public int? Useothercutoffday { get; set; }
-        [Column("othercutoffday")]
-        [StringLength(20)]
+        [Column("othercutoffday"), StringLength(20)]
         public string Othercutoffday { get; set; }
         [Column("entrylimit")]
         public int Entrylimit { get; set; }
         [Column("premiumevent")]
         public int? Premiumevent { get; set; }
-        [Column("ticketshopurl")]
-        [StringLength(255)]
+        [Column("ticketshopurl"), StringLength(255)]
         public string Ticketshopurl { get; set; }
         [Column("hiderefereeentries")]
         public int? Hiderefereeentries { get; set; }
@@ -122,11 +103,9 @@ namespace KSIMonitor.Data.SETModels {
         public int Officiallimitclub { get; set; }
         [Column("usedisclaimer")]
         public int? Usedisclaimer { get; set; }
-        [Column("eventcontactemail")]
-        [StringLength(255)]
+        [Column("eventcontactemail"), StringLength(255)]
         public string Eventcontactemail { get; set; }
-        [Column("timezone")]
-        [StringLength(50)]
+        [Column("timezone"), StringLength(50)]
         public string Timezone { get; set; }
         [Column("livestream")]
         public int? Livestream { get; set; }
@@ -138,8 +117,7 @@ namespace KSIMonitor.Data.SETModels {
         public int? Appsynccat { get; set; }
         [Column("appsyncclub")]
         public int? Appsyncclub { get; set; }
-        [Column("puuid")]
-        [StringLength(50)]
+        [Column("puuid"), StringLength(50)]
         public string Puuid { get; set; }
         [Column("headofdelegation")]
         public int? Headofdelegation { get; set; }
@@ -165,13 +143,11 @@ namespace KSIMonitor.Data.SETModels {
         public int? Hideathleteentries { get; set; }
         [Column("linkevent")]
         public int Linkevent { get; set; }
-        [Column("linkeventurl")]
-        [StringLength(255)]
+        [Column("linkeventurl"), StringLength(255)]
         public string Linkeventurl { get; set; }
         [Column("extregistrationmode")]
         public int? Extregistrationmode { get; set; }
-        [Column("extregistrationmoderoles")]
-        [StringLength(100)]
+        [Column("extregistrationmoderoles"), StringLength(100)]
         public string Extregistrationmoderoles { get; set; }
         [Column("billingaddress", TypeName = "text")]
         public string Billingaddress { get; set; }
@@ -201,45 +177,34 @@ namespace KSIMonitor.Data.SETModels {
         public int? Extregistrationnopermission { get; set; }
         [Column("paypalextrafeepercentage")]
         public float? Paypalextrafeepercentage { get; set; }
-        [Column("smfacebook")]
-        [StringLength(255)]
+        [Column("smfacebook"), StringLength(255)]
         public string Smfacebook { get; set; }
-        [Column("smwebsite")]
-        [StringLength(255)]
+        [Column("smwebsite"), StringLength(255)]
         public string Smwebsite { get; set; }
-        [Column("smtwitter")]
-        [StringLength(255)]
+        [Column("smtwitter"), StringLength(255)]
         public string Smtwitter { get; set; }
-        [Column("smyoutube")]
-        [StringLength(255)]
+        [Column("smyoutube"), StringLength(255)]
         public string Smyoutube { get; set; }
-        [Column("smflickr")]
-        [StringLength(255)]
+        [Column("smflickr"), StringLength(255)]
         public string Smflickr { get; set; }
-        [Column("smgoogle")]
-        [StringLength(255)]
+        [Column("smgoogle"), StringLength(255)]
         public string Smgoogle { get; set; }
-        [Column("sminstagram")]
-        [StringLength(255)]
+        [Column("sminstagram"), StringLength(255)]
         public string Sminstagram { get; set; }
         [Column("extregistrationintrefereeonly")]
         public int Extregistrationintrefereeonly { get; set; }
         [Column("extregistrationintcoachonly")]
         public int Extregistrationintcoachonly { get; set; }
-        [Column("starttime")]
-        [StringLength(20)]
+        [Column("starttime"), StringLength(20)]
         public string Starttime { get; set; }
-        [Column("endtime")]
-        [StringLength(20)]
+        [Column("endtime"), StringLength(20)]
         public string Endtime { get; set; }
-        [Column("regstarttime")]
-        [StringLength(20)]
+        [Column("regstarttime"), StringLength(20)]
         public string Regstarttime { get; set; }
-        [Column("regendtime")]
-        [StringLength(20)]
+        [Column("regendtime"), StringLength(20)]
         public string Regendtime { get; set; }
         [Column("extid")]
-        public int Extid { get; set; }
+        public int ExtID { get; set; }
         [Column("cartkeepopenafterdeadline")]
         public int? Cartkeepopenafterdeadline { get; set; }
         [Column("hidemedalstatistic")]
@@ -254,8 +219,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Showdrawsonlybypermission { get; set; }
         [Column("usegestpay")]
         public int Usegestpay { get; set; }
-        [Column("gestpayshoplogin")]
-        [StringLength(30)]
+        [Column("gestpayshoplogin"), StringLength(30)]
         public string Gestpayshoplogin { get; set; }
         [Column("gestpaynoamount")]
         public int Gestpaynoamount { get; set; }
@@ -273,8 +237,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Indentryusesportsid { get; set; }
         [Column("indentryuserankingtoprank")]
         public int Indentryuserankingtoprank { get; set; }
-        [Column("indentryuserankingtoprankendate")]
-        [StringLength(20)]
+        [Column("indentryuserankingtoprankendate"), StringLength(20)]
         public string Indentryuserankingtoprankendate { get; set; }
         [Column("paypalwlautoapproveonpayment")]
         public int Paypalwlautoapproveonpayment { get; set; }
@@ -284,15 +247,13 @@ namespace KSIMonitor.Data.SETModels {
         public int Enablewlpaymententryremover { get; set; }
         [Column("wlpaymententryremovermaxminutes")]
         public int Wlpaymententryremovermaxminutes { get; set; }
-        [Column("exttypefilter")]
-        [StringLength(150)]
+        [Column("exttypefilter"), StringLength(150)]
         public string Exttypefilter { get; set; }
         [Column("eventagegeneralfrom", TypeName = "date")]
         public DateTime? Eventagegeneralfrom { get; set; }
         [Column("eventagegeneralto", TypeName = "date")]
         public DateTime? Eventagegeneralto { get; set; }
-        [Column("custompaymenturl")]
-        [StringLength(255)]
+        [Column("custompaymenturl"), StringLength(255)]
         public string Custompaymenturl { get; set; }
         [Column("showstartercountonly")]
         public int? Showstartercountonly { get; set; }
@@ -302,23 +263,19 @@ namespace KSIMonitor.Data.SETModels {
         public int Scoremode { get; set; }
         [Column("hideresultlist")]
         public int? Hideresultlist { get; set; }
-        [Column("photouploadkey")]
-        [StringLength(50)]
+        [Column("photouploadkey"), StringLength(50)]
         public string Photouploadkey { get; set; }
         [Column("indentryshowrankingpos")]
         public int? Indentryshowrankingpos { get; set; }
-        [Column("extsystems")]
-        [StringLength(255)]
+        [Column("extsystems"), StringLength(255)]
         public string Extsystems { get; set; }
         [Column("showathleteprofilespublic")]
         public int? Showathleteprofilespublic { get; set; }
         [Column("usestripe")]
         public int Usestripe { get; set; }
-        [Column("stripepubkey")]
-        [StringLength(255)]
+        [Column("stripepubkey"), StringLength(255)]
         public string Stripepubkey { get; set; }
-        [Column("stripeseckey")]
-        [StringLength(255)]
+        [Column("stripeseckey"), StringLength(255)]
         public string Stripeseckey { get; set; }
         [Column("stripewlautoapproveonpayment")]
         public int Stripewlautoapproveonpayment { get; set; }
@@ -340,14 +297,11 @@ namespace KSIMonitor.Data.SETModels {
         public int? Superlicenseevent { get; set; }
         [Column("adminallowrefereescores")]
         public int? Adminallowrefereescores { get; set; }
-        [Column("extsystemswhitelist")]
-        [StringLength(255)]
+        [Column("extsystemswhitelist"), StringLength(255)]
         public string Extsystemswhitelist { get; set; }
-        [Column("resultscustomurl")]
-        [StringLength(255)]
+        [Column("resultscustomurl"), StringLength(255)]
         public string Resultscustomurl { get; set; }
-        [Column("medalscustomurl")]
-        [StringLength(255)]
+        [Column("medalscustomurl"), StringLength(255)]
         public string Medalscustomurl { get; set; }
         [Column("enablewlpaymententryremover_coach")]
         public int EnablewlpaymententryremoverCoach { get; set; }
@@ -363,8 +317,7 @@ namespace KSIMonitor.Data.SETModels {
         public int WlpaymententryremovermaxminutesOfficial { get; set; }
         [Column("indentryuserankingtoprankfrom")]
         public int Indentryuserankingtoprankfrom { get; set; }
-        [Column("eventcode")]
-        [StringLength(20)]
+        [Column("eventcode"), StringLength(20)]
         public string Eventcode { get; set; }
         [Column("athletelimitfilter", TypeName = "text")]
         public string Athletelimitfilter { get; set; }

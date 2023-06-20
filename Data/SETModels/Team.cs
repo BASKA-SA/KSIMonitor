@@ -4,8 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("team")]
+    [Table("team"), Keyless]
     public partial class Team {
         [Column("teamid")]
         public int Teamid { get; set; }
@@ -25,8 +24,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Accprinted { get; set; }
         [Column("accprintedtime", TypeName = "timestamp")]
         public DateTime? Accprintedtime { get; set; }
-        [Column("acccustom")]
-        [StringLength(255)]
+        [Column("acccustom"), StringLength(255)]
         public string Acccustom { get; set; }
         [Column("checkokmedical")]
         public int? Checkokmedical { get; set; }

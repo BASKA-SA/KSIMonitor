@@ -3,15 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("veranstaltung_limitbasedoncompetitors")]
+    [Table("veranstaltung_limitbasedoncompetitors"), Keyless]
     public partial class VeranstaltungLimitbasedoncompetitor {
         [Column("veranstaltung_id")]
-        public int VeranstaltungId { get; set; }
+        public int VeranstaltungID { get; set; }
         [Column("person_type")]
         public int PersonType { get; set; }
-        [Required]
-        [Column("limitrule", TypeName = "text")]
+        [Column("limitrule", TypeName = "text"), Required]
         public string Limitrule { get; set; }
     }
 }

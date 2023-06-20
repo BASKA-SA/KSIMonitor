@@ -4,21 +4,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("wartelisteofficial")]
+    [Table("wartelisteofficial"), Keyless]
     public partial class Wartelisteofficial {
         [Column("vernr")]
         public int Vernr { get; set; }
         [Column("katnr")]
         public int Katnr { get; set; }
         [Column("id")]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("time", TypeName = "timestamp")]
         public DateTime Time { get; set; }
         [Column("registrator")]
         public int? Registrator { get; set; }
-        [Column("daysinfo")]
-        [StringLength(50)]
+        [Column("daysinfo"), StringLength(50)]
         public string Daysinfo { get; set; }
         [Column("approved")]
         public int Approved { get; set; }

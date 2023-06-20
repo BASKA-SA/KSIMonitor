@@ -5,9 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("timetable")]
     public partial class Timetable {
-        [Key]
-        [Column("id")]
-        public int Id { get; set; }
+        [Column("id"), Key]
+        public int ID { get; set; }
         [Column("vernr")]
         public int Vernr { get; set; }
         [Column("date", TypeName = "date")]
@@ -18,9 +17,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Knr { get; set; }
         [Column("catname", TypeName = "text")]
         public string Catname { get; set; }
-        [Required]
-        [Column("sex")]
-        [StringLength(1)]
+        [Column("sex"), Required, StringLength(1)]
         public string Sex { get; set; }
         [Column("type")]
         public int Type { get; set; }
@@ -36,16 +33,13 @@ namespace KSIMonitor.Data.SETModels {
         public int Fighttime { get; set; }
         [Column("edited")]
         public int Edited { get; set; }
-        [Required]
-        [Column("color")]
-        [StringLength(7)]
+        [Column("color"), Required, StringLength(7)]
         public string Color { get; set; }
         [Column("starttime", TypeName = "timestamp")]
         public DateTime Starttime { get; set; }
         [Column("endtime", TypeName = "timestamp")]
         public DateTime Endtime { get; set; }
-        [Column("comment")]
-        [StringLength(255)]
+        [Column("comment"), StringLength(255)]
         public string Comment { get; set; }
         [Column("matchnumber")]
         public int Matchnumber { get; set; }

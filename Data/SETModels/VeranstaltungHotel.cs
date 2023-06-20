@@ -3,18 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("veranstaltung_hotel")]
+    [Table("veranstaltung_hotel"), Keyless]
     public partial class VeranstaltungHotel {
         [Column("vernr")]
         public int Vernr { get; set; }
-        [Required]
-        [Column("title")]
-        [StringLength(255)]
+        [Column("title"), Required, StringLength(255)]
         public string Title { get; set; }
-        [Required]
-        [Column("url")]
-        [StringLength(255)]
+        [Column("url"), Required, StringLength(255)]
         public string Url { get; set; }
         [Column("description", TypeName = "text")]
         public string Description { get; set; }

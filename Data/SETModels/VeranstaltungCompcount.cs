@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("veranstaltung_compcount")]
+    [Table("veranstaltung_compcount"), Keyless]
     public partial class VeranstaltungCompcount {
         [Column("vernr")]
         public int Vernr { get; set; }

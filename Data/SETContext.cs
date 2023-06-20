@@ -353,7 +353,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Nation).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Passwort).HasDefaultValueSql("''");
                 entity.Property(e => e.Privacypolicyagreedate).HasDefaultValueSql("'1990-01-01 01:01:01'");
-                entity.Property(e => e.Titel).HasDefaultValueSql("''");
+                entity.Property(e => e.Title).HasDefaultValueSql("''");
                 entity.Property(e => e.Vorname).HasDefaultValueSql("''");
             });
 
@@ -443,7 +443,7 @@ namespace KSIMonitor.Data {
 
             modelBuilder.Entity<VeranstaltungProtest>(entity => {
                 entity.Property(e => e.Athnnr).HasDefaultValueSql("'0'");
-                entity.Property(e => e.Catid).HasDefaultValueSql("'0'");
+                entity.Property(e => e.CatID).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Creation).ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
@@ -510,7 +510,7 @@ namespace KSIMonitor.Data {
 
             modelBuilder.Entity<Wartelisteteam>(entity => {
                 entity.Property(e => e.Replacement).HasDefaultValueSql("'0'");
-                entity.Property(e => e.Teamid).ValueGeneratedOnAdd();
+                entity.Property(e => e.TeamID).ValueGeneratedOnAdd();
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 

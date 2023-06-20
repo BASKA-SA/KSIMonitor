@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("trostrunde_pool")]
+    [Table("trostrunde_pool"), Keyless]
     public partial class TrostrundePool {
         [Column("id")]
         public long Id { get; set; }

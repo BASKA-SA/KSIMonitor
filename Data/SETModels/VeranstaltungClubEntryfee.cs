@@ -4,8 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("veranstaltung_club_entryfee")]
+    [Table("veranstaltung_club_entryfee"), Keyless]
     public partial class VeranstaltungClubEntryfee {
         [Column("vernr")]
         public int Vernr { get; set; }
@@ -13,8 +12,7 @@ namespace KSIMonitor.Data.SETModels {
         public int Vereinnr { get; set; }
         [Column("paidammount")]
         public float? Paidammount { get; set; }
-        [Column("comment")]
-        [StringLength(255)]
+        [Column("comment"), StringLength(255)]
         public string Comment { get; set; }
         [Column("changes")]
         public int Changes { get; set; }

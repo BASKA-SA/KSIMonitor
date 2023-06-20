@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("veranstaltung_exchangerate")]
+    [Table("veranstaltung_exchangerate"), Keyless]
     public partial class VeranstaltungExchangerate {
         [Column("vernr")]
         public int Vernr { get; set; }

@@ -3,15 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace KSIMonitor.Data.SETModels {
-    [Keyless]
-    [Table("wartelistecoach")]
+    [Table("wartelistecoach"), Keyless]
     public partial class Wartelistecoach {
         [Column("vernr")]
         public int Vernr { get; set; }
         [Column("katnr")]
         public int Katnr { get; set; }
         [Column("id")]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("time", TypeName = "timestamp")]
         public DateTime Time { get; set; }
         [Column("registrator")]

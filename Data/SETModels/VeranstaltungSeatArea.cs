@@ -5,13 +5,10 @@ namespace KSIMonitor.Data.SETModels {
     [Table("veranstaltung_seat_area")]
     public partial class VeranstaltungSeatArea {
         [Column("verid")]
-        public int Verid { get; set; }
-        [Key]
-        [Column("id")]
-        public int Id { get; set; }
-        [Required]
-        [Column("title")]
-        [StringLength(255)]
+        public int VerID { get; set; }
+        [Column("id"), Key]
+        public int ID { get; set; }
+        [Column("title"), Required, StringLength(255)]
         public string Title { get; set; }
     }
 }
