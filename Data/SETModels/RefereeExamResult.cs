@@ -5,7 +5,7 @@ namespace KSIMonitor.Data.SETModels {
     [Table("referee_exam_result"), Keyless]
     public partial class RefereeExamResult {
         [Column("vernr")]
-        public int Vernr { get; set; }
+        public int EventID { get; set; }
         [Column("examid")]
         public int Examid { get; set; }
         [Column("tewronganswers")]

@@ -7,6 +7,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("id"), Key]
         public int Id { get; set; }
         [Column("bezeichnung"), Required, StringLength(255)]
-        public string Bezeichnung { get; set; }
+        public string Name { get; set; }
     }
 }

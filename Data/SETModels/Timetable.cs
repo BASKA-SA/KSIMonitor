@@ -8,13 +8,13 @@ namespace KSIMonitor.Data.SETModels {
         [Column("id"), Key]
         public int ID { get; set; }
         [Column("vernr")]
-        public int Vernr { get; set; }
+        public int EventID { get; set; }
         [Column("date", TypeName = "date")]
         public DateTime Date { get; set; }
         [Column("tatamis")]
         public int Tatamis { get; set; }
         [Column("knr")]
-        public int Knr { get; set; }
+        public int CategoryID { get; set; }
         [Column("catname", TypeName = "text")]
         public string Catname { get; set; }
         [Column("sex"), Required, StringLength(1)]

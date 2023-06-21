@@ -26,7 +26,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("geschlecht"), Required, StringLength(1)]
         public string Geschlecht { get; set; }
         [Column("vereinnr")]
-        public int Vereinnr { get; set; }
+        public int AssociationID { get; set; }
         [Column("nationnr")]
         public int? Nationnr { get; set; }
         [Column("lizenzint", TypeName = "text")]

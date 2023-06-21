@@ -23,6 +23,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("pecriteriasmax")]
         public int? Pecriteriasmax { get; set; }
         [Column("vernr")]
-        public int Vernr { get; set; }
+        public int EventID { get; set; }
     }
 }

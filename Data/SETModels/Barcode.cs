@@ -10,10 +10,10 @@ namespace KSIMonitor.Data.SETModels {
         [Column("barcode"), Required, StringLength(50)]
         public string Barcode1 { get; set; }
         [Column("id")]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("persontype")]
         public int Persontype { get; set; }
         [Column("personid")]
-        public int Personid { get; set; }
+        public int PersonID { get; set; }
     }
 }

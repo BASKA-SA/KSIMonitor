@@ -6,9 +6,9 @@ namespace KSIMonitor.Data.SETModels {
     [Table("referee_match")]
     public partial class RefereeMatch {
         [Column("id"), Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("vernr")]
-        public int? Vernr { get; set; }
+        public int? EventID { get; set; }
         [Column("refid")]
         public int? Refid { get; set; }
         [Column("matchid"), StringLength(50)]

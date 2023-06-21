@@ -5,109 +5,109 @@ namespace KSIMonitor.Data {
     public partial class SETContext : DbContext, IDBContext {
         public SETContext(DbContextOptions<SETContext> options) : base(options) { }
 
-        public virtual DbSet<Accessarea> AccessAreas { get; set; }
-        public virtual DbSet<Auslosungeinzel> Auslosungeinzels { get; set; }
-        public virtual DbSet<Auslosungteam> Auslosungteams { get; set; }
+        public virtual DbSet<AccessArea> AccessAreas { get; set; }
+        public virtual DbSet<Association> Associations { get; set; }
+        public virtual DbSet<AwardCeremonyCompleted> AwardCeremonyCompleted { get; set; }
         public virtual DbSet<Barcode> Barcodes { get; set; }
         public virtual DbSet<Binomio> Binomios { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<CategoryMatch> CategoryMatches { get; set; }
-        public virtual DbSet<Clientmonitor> Clientmonitors { get; set; }
+        public virtual DbSet<ClientMonitor> ClientMonitors { get; set; }
         public virtual DbSet<Coach> Coaches { get; set; }
         public virtual DbSet<CoachCategory> CoachCategories { get; set; }
-        public virtual DbSet<CoachcatAccess> CoachcatAccesses { get; set; }
-        public virtual DbSet<Doubleeliminationeinzel> Doubleeliminationeinzels { get; set; }
-        public virtual DbSet<Doubleeliminationteam> Doubleeliminationteams { get; set; }
-        public virtual DbSet<Dtmdefault> Dtmdefaults { get; set; }
-        public virtual DbSet<Entryfeemodel> Entryfeemodels { get; set; }
-        public virtual DbSet<Ergebniseinzel> Ergebniseinzels { get; set; }
-        public virtual DbSet<Ergebnisteam> Ergebnisteams { get; set; }
+        public virtual DbSet<CoachCategoryAccess> CoachCategoryAccess { get; set; }
+        public virtual DbSet<Currency> Currencies { get; set; }
+        public virtual DbSet<DoubleEliminationSingle> DoubleEliminationsSingle { get; set; }
+        public virtual DbSet<DoubleEliminationTeam> DoubleEliminationsTeam { get; set; }
+        public virtual DbSet<DrawSingle> DrawsSingle { get; set; }
+        public virtual DbSet<DrawTeam> DrawsTeam { get; set; }
+        public virtual DbSet<DTMDefault> DTMDefaults { get; set; }
+        public virtual DbSet<EntryCoach> EntriesCoach { get; set; }
+        public virtual DbSet<EntryFeeModel> EntryFeeModels { get; set; }
+        public virtual DbSet<EntryOfficial> EntriesOfficial { get; set; }
+        public virtual DbSet<EntryReferee> EntriesReferee { get; set; }
+        public virtual DbSet<EntrySingle> EntriesSingle { get; set; }
+        public virtual DbSet<EntryTeam> EntriesTeam { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<EventArea> EventAreas { get; set; }
+        public virtual DbSet<EventCategory> EventCategories { get; set; }
+        public virtual DbSet<EventClubEntryFee> EventClubEntryFees { get; set; }
+        public virtual DbSet<EventCoachCategory> EventCoachCategories { get; set; }
+        public virtual DbSet<EventCompCount> EventCompCounts { get; set; }
+        public virtual DbSet<EventExchangeRate> EventExchangeRates { get; set; }
+        public virtual DbSet<EventHeadOfDelegation> EventHeadOfDelegations { get; set; }
+        public virtual DbSet<EventHotel> EventHotels { get; set; }
+        public virtual DbSet<EventLimitBasedOnCompetitor> EventLimitBasedOnCompetitors { get; set; }
+        public virtual DbSet<EventMatchDuration> EventMatchDurations { get; set; }
+        public virtual DbSet<EventOfficialCategory> EventOfficialCategories { get; set; }
+        public virtual DbSet<EventProtest> EventProtests { get; set; }
+        public virtual DbSet<EventRefereeCategory> EventRefereeCategories { get; set; }
+        public virtual DbSet<EventSeatArea> EventSeatAreas { get; set; }
+        public virtual DbSet<EventSeatAreaSeat> EventSeatAreaSeats { get; set; }
+        public virtual DbSet<EventType> EventTypes { get; set; }
+        public virtual DbSet<EventUser> EventUsers { get; set; }
         public virtual DbSet<Exam> Exams { get; set; }
-        public virtual DbSet<Kategorie> Kategories { get; set; }
         public virtual DbSet<Kata> Kata { get; set; }
-        public virtual DbSet<Landesverband> Landesverbands { get; set; }
         public virtual DbSet<MatchCalling> MatchCallings { get; set; }
-        public virtual DbSet<Matchinfo> Matchinfos { get; set; }
-        public virtual DbSet<Mitschrifteinzel> Mitschrifteinzels { get; set; }
-        public virtual DbSet<Mitschriftteam> Mitschriftteams { get; set; }
+        public virtual DbSet<MatchInfo> MatchInfos { get; set; }
         public virtual DbSet<Name> Names { get; set; }
         public virtual DbSet<Nation> Nations { get; set; }
-        public virtual DbSet<Nennungencoach> Nennungencoaches { get; set; }
-        public virtual DbSet<Nennungeneinzel> Nennungeneinzels { get; set; }
-        public virtual DbSet<Nennungenofficial> Nennungenofficials { get; set; }
-        public virtual DbSet<Nennungenreferee> Nennungenreferees { get; set; }
-        public virtual DbSet<Nennungenteam> Nennungenteams { get; set; }
+        public virtual DbSet<NationalAssociation> NationalAssociations { get; set; }
         public virtual DbSet<Official> Officials { get; set; }
         public virtual DbSet<OfficialCategory> OfficialCategories { get; set; }
-        public virtual DbSet<OfficialcatAccess> OfficialcatAccesses { get; set; }
-        public virtual DbSet<PatterMatch> PatterMatches { get; set; }
-        public virtual DbSet<Personemail> Personemails { get; set; }
-        public virtual DbSet<Poolsiegereinzel> Poolsiegereinzels { get; set; }
-        public virtual DbSet<Poolsiegerteam> Poolsiegerteams { get; set; }
+        public virtual DbSet<OfficialCategoryAccess> OfficialCategoryAccess { get; set; }
+        public virtual DbSet<PatternMatch> PatternMatches { get; set; }
+        public virtual DbSet<PersonEmail> PersonEmails { get; set; }
+        public virtual DbSet<PointHistorySingle> PointHistoriesSingle { get; set; }
+        public virtual DbSet<PointHistoryTeam> PointHistoriesTeam { get; set; }
+        public virtual DbSet<PointListSingle> PointListSingle { get; set; }
+        public virtual DbSet<PointListTeam> PointListTeam { get; set; }
+        public virtual DbSet<PoolWinnerSingle> PoolWinnersSingle { get; set; }
+        public virtual DbSet<PoolWinnerTeam> PoolWinnersTeam { get; set; }
         public virtual DbSet<PressFunction> PressFunctions { get; set; }
         public virtual DbSet<PressRegistration> PressRegistrations { get; set; }
         public virtual DbSet<PressType> PressTypes { get; set; }
-        public virtual DbSet<PresstypeAccess> PresstypeAccesses { get; set; }
-        public virtual DbSet<Punktelisteeinzel> Punktelisteeinzels { get; set; }
-        public virtual DbSet<Punktelisteteam> Punktelisteteams { get; set; }
+        public virtual DbSet<PressTypeAccess> PressTypeAccess { get; set; }
         public virtual DbSet<Referee> Referees { get; set; }
         public virtual DbSet<RefereeCategory> RefereeCategories { get; set; }
+        public virtual DbSet<RefereeCategoryAccess> RefereeCategoryAccess { get; set; }
         public virtual DbSet<RefereeExam> RefereeExams { get; set; }
         public virtual DbSet<RefereeExamDecision> RefereeExamDecisions { get; set; }
         public virtual DbSet<RefereeExamResult> RefereeExamResults { get; set; }
         public virtual DbSet<RefereeMatch> RefereeMatches { get; set; }
-        public virtual DbSet<RefereeMatcharea> RefereeMatchareas { get; set; }
-        public virtual DbSet<RefereecatAccess> RefereecatAccesses { get; set; }
-        public virtual DbSet<RoleTyp> RoleTyps { get; set; }
-        public virtual DbSet<SiegerehrungErledigt> SiegerehrungErledigts { get; set; }
-        public virtual DbSet<Sportart> Sportarts { get; set; }
-        public virtual DbSet<Stilrichtung> Stilrichtungs { get; set; }
-        public virtual DbSet<Sysparam> Sysparams { get; set; }
+        public virtual DbSet<RefereeMatchArea> RefereeMatchAreas { get; set; }
+        public virtual DbSet<RepechageEntrySingle> RepechageEntriesSingle { get; set; }
+        public virtual DbSet<RepechageEntryTeam> RepechageEntriesTeam { get; set; }
+        public virtual DbSet<RepechagePool> RepechagePools { get; set; }
+        public virtual DbSet<ResultSingle> ResultsSingle { get; set; }
+        public virtual DbSet<ResultTeam> ResultsTeam { get; set; }
+        public virtual DbSet<RoleType> RoleTypes { get; set; }
+        public virtual DbSet<SportArt> SportArts { get; set; }
+        public virtual DbSet<Style> Styles { get; set; }
+        public virtual DbSet<SystemParameter> SystemParameters { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
-        public virtual DbSet<TeamWarteliste> TeamWartelistes { get; set; }
+        public virtual DbSet<TeamWaitingList> TeamWaitingList { get; set; }
         public virtual DbSet<Timetable> Timetables { get; set; }
-        public virtual DbSet<TrostrundePool> TrostrundePools { get; set; }
-        public virtual DbSet<Trostrundeeinzel> Trostrundeeinzels { get; set; }
-        public virtual DbSet<Trostrundeteam> Trostrundeteams { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Veranstaltung> Veranstaltungs { get; set; }
-        public virtual DbSet<VeranstaltungArea> VeranstaltungAreas { get; set; }
-        public virtual DbSet<VeranstaltungClubEntryfee> VeranstaltungClubEntryfees { get; set; }
-        public virtual DbSet<VeranstaltungCoachCategory> VeranstaltungCoachCategories { get; set; }
-        public virtual DbSet<VeranstaltungCompcount> VeranstaltungCompcounts { get; set; }
-        public virtual DbSet<VeranstaltungExchangerate> VeranstaltungExchangerates { get; set; }
-        public virtual DbSet<VeranstaltungHeadofdelegation> VeranstaltungHeadofdelegations { get; set; }
-        public virtual DbSet<VeranstaltungHotel> VeranstaltungHotels { get; set; }
-        public virtual DbSet<VeranstaltungLimitbasedoncompetitor> VeranstaltungLimitbasedoncompetitors { get; set; }
-        public virtual DbSet<VeranstaltungMatchduration> VeranstaltungMatchdurations { get; set; }
-        public virtual DbSet<VeranstaltungOfficialCategory> VeranstaltungOfficialCategories { get; set; }
-        public virtual DbSet<VeranstaltungProtest> VeranstaltungProtests { get; set; }
-        public virtual DbSet<VeranstaltungRefereeCategory> VeranstaltungRefereeCategories { get; set; }
-        public virtual DbSet<VeranstaltungSeatArea> VeranstaltungSeatAreas { get; set; }
-        public virtual DbSet<VeranstaltungSeatAreaSeat> VeranstaltungSeatAreaSeats { get; set; }
-        public virtual DbSet<VeranstaltungTyp> VeranstaltungTyps { get; set; }
-        public virtual DbSet<VeranstaltungUser> VeranstaltungUsers { get; set; }
-        public virtual DbSet<Veranstaltungkat> Veranstaltungkats { get; set; }
-        public virtual DbSet<Verein> Vereins { get; set; }
-        public virtual DbSet<Waehrung> Waehrungs { get; set; }
-        public virtual DbSet<Wartelistecoach> Wartelistecoaches { get; set; }
-        public virtual DbSet<Wartelisteeinzel> Wartelisteeinzels { get; set; }
-        public virtual DbSet<Wartelisteofficial> Wartelisteofficials { get; set; }
-        public virtual DbSet<Wartelistereferee> Wartelistereferees { get; set; }
-        public virtual DbSet<Wartelisteteam> Wartelisteteams { get; set; }
-        public virtual DbSet<Wintype> Wintypes { get; set; }
+        public virtual DbSet<WaitingListCoach> WaitingListCoach { get; set; }
+        public virtual DbSet<WaitingListOfficial> WaitingListOfficials { get; set; }
+        public virtual DbSet<WaitingListReferee> WaitingListReferee { get; set; }
+        public virtual DbSet<WaitingListSingle> WaitingListSingle { get; set; }
+        public virtual DbSet<WaitingListTeam> WaitingListTeam { get; set; }
+        public virtual DbSet<WinType> WinTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
-            modelBuilder.Entity<Accessarea>(entity => {
-                entity.HasKey(e => e.Accnr).HasName("PRIMARY");
-                entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
+            modelBuilder.Entity<AccessArea>(entity => {
+                entity.HasKey(e => e.AccessID).HasName("PRIMARY");
+                entity.Property(e => e.Name).HasDefaultValueSql("''");
             });
 
-            modelBuilder.Entity<Auslosungeinzel>(entity => {
+            modelBuilder.Entity<DrawSingle>(entity => {
                 entity.Property(e => e.Del).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Auslosungteam>(entity => {
+            modelBuilder.Entity<DrawTeam>(entity => {
                 entity.Property(e => e.Del).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
@@ -117,7 +117,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Sichtbar).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Clientmonitor>(entity => {
+            modelBuilder.Entity<ClientMonitor>(entity => {
                 entity.Property(e => e.ClientMode).HasDefaultValueSql("'1'");
                 entity.Property(e => e.Creation).ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Expire).HasDefaultValueSql("'1970-01-01 02:00:01'");
@@ -135,24 +135,24 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Title).HasDefaultValueSql("''");
             });
 
-            modelBuilder.Entity<Doubleeliminationeinzel>(entity => {
+            modelBuilder.Entity<DoubleEliminationSingle>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Doubleeliminationteam>(entity => {
+            modelBuilder.Entity<DoubleEliminationTeam>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Dtmdefault>(entity => {
+            modelBuilder.Entity<DTMDefault>(entity => {
                 entity.Property(e => e.Catname).HasDefaultValueSql("''");
                 entity.Property(e => e.Color).HasDefaultValueSql("''");
                 entity.Property(e => e.Sex).HasDefaultValueSql("''").IsFixedLength();
                 entity.Property(e => e.Type).HasDefaultValueSql("''").IsFixedLength();
             });
 
-            modelBuilder.Entity<Entryfeemodel>(entity => {
+            modelBuilder.Entity<EntryFeeModel>(entity => {
                 entity.Property(e => e.Binomioageflatfeeage).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Binomioageflatfeeenable).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Binomiosamecode).HasDefaultValueSql("'0'");
@@ -170,8 +170,8 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Tepercentage).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<Kategorie>(entity => {
-                entity.HasKey(e => e.Knr).HasName("PRIMARY");
+            modelBuilder.Entity<Category>(entity => {
+                entity.HasKey(e => e.CategoryID).HasName("PRIMARY");
                 entity.Property(e => e.Geschlecht).IsFixedLength();
                 entity.Property(e => e.Katbez).HasDefaultValueSql("''");
                 entity.Property(e => e.Team).IsFixedLength();
@@ -182,8 +182,8 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Stilnr).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Landesverband>(entity => {
-                entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
+            modelBuilder.Entity<NationalAssociation>(entity => {
+                entity.Property(e => e.Name).HasDefaultValueSql("''");
             });
 
             modelBuilder.Entity<MatchCalling>(entity => {
@@ -192,18 +192,18 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Winner).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<Mitschrifteinzel>(entity => {
+            modelBuilder.Entity<PointHistorySingle>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Mitschriftteam>(entity => {
+            modelBuilder.Entity<PointHistoryTeam>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
 
             modelBuilder.Entity<Name>(entity => {
-                entity.HasKey(e => e.Nnr).HasName("PRIMARY");
+                entity.HasKey(e => e.NameID).HasName("PRIMARY");
                 entity.Property(e => e.AccountEnabled).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Dan).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Email).HasDefaultValueSql("''");
@@ -215,34 +215,34 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Nationnr).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Sichtbar).HasDefaultValueSql("'1'");
                 entity.Property(e => e.Stpktnr).HasDefaultValueSql("'0'");
-                entity.Property(e => e.Vereinnr).HasDefaultValueSql("'3'");
+                entity.Property(e => e.AssociationID).HasDefaultValueSql("'3'");
             });
 
             modelBuilder.Entity<Nation>(entity => {
-                entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
+                entity.Property(e => e.Name).HasDefaultValueSql("''");
                 entity.Property(e => e.Hide).HasDefaultValueSql("'0'");
                 entity.Property(e => e.ISO).HasDefaultValueSql("''");
             });
 
-            modelBuilder.Entity<Nennungencoach>(entity => {
+            modelBuilder.Entity<EntryCoach>(entity => {
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Nennungeneinzel>(entity => {
+            modelBuilder.Entity<EntrySingle>(entity => {
                 entity.Property(e => e.Measurement).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Nennungenofficial>(entity => {
+            modelBuilder.Entity<EntryOfficial>(entity => {
                 entity.Property(e => e.Daysinfo).HasDefaultValueSql("''");
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Nennungenreferee>(entity => {
+            modelBuilder.Entity<EntryReferee>(entity => {
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Nennungenteam>(entity => {
+            modelBuilder.Entity<EntryTeam>(entity => {
                 entity.Property(e => e.TeamID).ValueGeneratedOnAdd();
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
@@ -255,16 +255,16 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Title).HasDefaultValueSql("''");
             });
 
-            modelBuilder.Entity<Personemail>(entity => {
+            modelBuilder.Entity<PersonEmail>(entity => {
                 entity.Property(e => e.Email).HasDefaultValueSql("''");
             });
 
-            modelBuilder.Entity<Poolsiegereinzel>(entity => {
+            modelBuilder.Entity<PoolWinnerSingle>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Poolsiegerteam>(entity => {
+            modelBuilder.Entity<PoolWinnerTeam>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
             });
@@ -273,7 +273,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Regtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Punktelisteeinzel>(entity => {
+            modelBuilder.Entity<PointListSingle>(entity => {
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
                 entity.Property(e => e.S1).HasDefaultValueSql("'0'");
                 entity.Property(e => e.S2).HasDefaultValueSql("'0'");
@@ -284,7 +284,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.S7).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<Punktelisteteam>(entity => {
+            modelBuilder.Entity<PointListTeam>(entity => {
                 entity.Property(e => e.Pool).HasDefaultValueSql("'1'");
                 entity.Property(e => e.S1).HasDefaultValueSql("'0'");
                 entity.Property(e => e.S2).HasDefaultValueSql("'0'");
@@ -314,9 +314,9 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Lastchange).ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Sportart>(entity => {
-                entity.HasKey(e => e.Sportartnr).HasName("PRIMARY");
-                entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
+            modelBuilder.Entity<SportArt>(entity => {
+                entity.HasKey(e => e.SportArtID).HasName("PRIMARY");
+                entity.Property(e => e.Name).HasDefaultValueSql("''");
             });
 
             modelBuilder.Entity<Team>(entity => {
@@ -334,11 +334,11 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Type).HasDefaultValueSql("'1'");
             });
 
-            modelBuilder.Entity<Trostrundeeinzel>(entity => {
+            modelBuilder.Entity<RepechageEntrySingle>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Trostrundeteam>(entity => {
+            modelBuilder.Entity<RepechageEntryTeam>(entity => {
                 entity.Property(e => e.Matchtime).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
@@ -357,14 +357,14 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Vorname).HasDefaultValueSql("''");
             });
 
-            modelBuilder.Entity<Veranstaltung>(entity => {
-                entity.HasKey(e => e.Vernr).HasName("PRIMARY");
+            modelBuilder.Entity<Event>(entity => {
+                entity.HasKey(e => e.EventID).HasName("PRIMARY");
                 entity.Property(e => e.Adminallowrefereescores).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Allentriesonwaitinglist).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Appsynccat).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Appsyncclub).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Appsyncevent).HasDefaultValueSql("'0'");
-                entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
+                entity.Property(e => e.Name).HasDefaultValueSql("''");
                 entity.Property(e => e.Cartkeepopenafterdeadline).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Cattotallimitputwlcat).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Deletetodraw).HasDefaultValueSql("'0'");
@@ -421,7 +421,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Waehrung).HasDefaultValueSql("'45'");
             });
 
-            modelBuilder.Entity<VeranstaltungArea>(entity => {
+            modelBuilder.Entity<EventArea>(entity => {
                 entity.Property(e => e.Athletesallowed).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Coachcatsallowed).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Coachesallowed).HasDefaultValueSql("'0'");
@@ -435,28 +435,28 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Refereesallowed).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<VeranstaltungClubEntryfee>(entity => {
+            modelBuilder.Entity<EventClubEntryFee>(entity => {
                 entity.Property(e => e.Comment).HasDefaultValueSql("''");
                 entity.Property(e => e.Discount).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Paidammount).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<VeranstaltungProtest>(entity => {
+            modelBuilder.Entity<EventProtest>(entity => {
                 entity.Property(e => e.Athnnr).HasDefaultValueSql("'0'");
                 entity.Property(e => e.CatID).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Creation).ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<VeranstaltungSeatAreaSeat>(entity => {
+            modelBuilder.Entity<EventSeatAreaSeat>(entity => {
                 entity.Property(e => e.Reserved).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<VeranstaltungUser>(entity => {
+            modelBuilder.Entity<EventUser>(entity => {
                 entity.Property(e => e.Emailnotification).HasDefaultValueSql("'1'");
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Veranstaltungkat>(entity => {
+            modelBuilder.Entity<EventCategory>(entity => {
                 entity.Property(e => e.BodyLevel).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Exrefselfass).HasDefaultValueSql("'0'");
                 entity.Property(e => e.GoldenpointEnable).HasDefaultValueSql("'0'");
@@ -481,9 +481,9 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Weightmin).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<Verein>(entity => {
-                entity.HasKey(e => e.Vereinnr).HasName("PRIMARY");
-                entity.Property(e => e.Bezeichnung).HasDefaultValueSql("''");
+            modelBuilder.Entity<Association>(entity => {
+                entity.HasKey(e => e.AssociationID).HasName("PRIMARY");
+                entity.Property(e => e.Name).HasDefaultValueSql("''");
                 entity.Property(e => e.Lvnr).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Nation).HasDefaultValueSql("'15'");
                 entity.Property(e => e.Sektionnr).HasDefaultValueSql("'0'");
@@ -491,24 +491,24 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Teamtype).HasDefaultValueSql("'0'");
             });
 
-            modelBuilder.Entity<Wartelistecoach>(entity => {
+            modelBuilder.Entity<WaitingListCoach>(entity => {
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Wartelisteeinzel>(entity => {
+            modelBuilder.Entity<WaitingListSingle>(entity => {
                 entity.Property(e => e.Replacement).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Wartelisteofficial>(entity => {
+            modelBuilder.Entity<WaitingListOfficial>(entity => {
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Wartelistereferee>(entity => {
+            modelBuilder.Entity<WaitingListReferee>(entity => {
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");
             });
 
-            modelBuilder.Entity<Wartelisteteam>(entity => {
+            modelBuilder.Entity<WaitingListTeam>(entity => {
                 entity.Property(e => e.Replacement).HasDefaultValueSql("'0'");
                 entity.Property(e => e.TeamID).ValueGeneratedOnAdd();
                 entity.Property(e => e.Time).HasDefaultValueSql("CURRENT_TIMESTAMP");

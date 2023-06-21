@@ -6,13 +6,13 @@ namespace KSIMonitor.Data.SETModels {
     [Table("names")]
     public partial class Name {
         [Column("nnr"), Key]
-        public int Nnr { get; set; }
+        public int NameID { get; set; }
         [Column("name"), Required, StringLength(255)]
         public string Name1 { get; set; }
         [Column("geburt", TypeName = "date")]
         public DateTime Geburt { get; set; }
         [Column("vereinnr")]
-        public int Vereinnr { get; set; }
+        public int AssociationID { get; set; }
         [Column("geschlecht"), StringLength(1)]
         public string Geschlecht { get; set; }
         [Column("gewicht")]

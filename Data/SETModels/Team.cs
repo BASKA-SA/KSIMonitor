@@ -7,9 +7,9 @@ namespace KSIMonitor.Data.SETModels {
     [Table("team"), Keyless]
     public partial class Team {
         [Column("teamid")]
-        public int Teamid { get; set; }
+        public int TeamID { get; set; }
         [Column("nnr")]
-        public int Nnr { get; set; }
+        public int NameID { get; set; }
         [Column("checkokentry")]
         public int? Checkokentry { get; set; }
         [Column("checkcomentry", TypeName = "text")]
