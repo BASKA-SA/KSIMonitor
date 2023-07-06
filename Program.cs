@@ -31,6 +31,7 @@ namespace KSIMonitor {
         public const string AppName = "KSI Monitor";
 
         public const string RoleNameRoleAdmin = "RoleAdmin";
+        public const string RoleNameDBAdmin = "DBAdmin";
         public const string RoleNameUser = "User";
 
         private static async Task onStartup(System.IServiceProvider serviceProvider) {
@@ -39,7 +40,7 @@ namespace KSIMonitor {
             await Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.MigrateAsync(dbContext.Database);
 
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            string[] roleNames = new string[] { RoleNameRoleAdmin, RoleNameUser };
+            string[] roleNames = new string[] { RoleNameRoleAdmin, RoleNameDBAdmin, RoleNameUser };
             var dbRoles = await Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync(dbContext.Roles.Select(r => r.Name));
             foreach (string roleName in roleNames) {
                 if (!dbRoles.Contains(roleName))

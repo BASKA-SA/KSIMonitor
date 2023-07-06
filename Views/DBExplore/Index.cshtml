@@ -1,0 +1,13 @@
+@model IEnumerable<string>
+@{
+    ViewData["Title"] = "DBExplore Index";
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    <ul>
+        @foreach (var item in Model) {
+            <li><a asp-action="Table" asp-route-name="@item">@item</a></li>
+        }
+    </ul>
+</p>
