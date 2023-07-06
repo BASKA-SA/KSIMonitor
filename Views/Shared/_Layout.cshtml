@@ -10,7 +10,7 @@
 </head>
 <body>
     <partial name="Partials/_Navbar" />
-    <div class="container">
+    <div class="container" @RenderSection("ContainerAttributes", required: false)>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

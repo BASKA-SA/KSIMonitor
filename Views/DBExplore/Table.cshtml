@@ -1,11 +1,16 @@
 @model (List<dynamic> Items, Type Type)
 @{
-    ViewData["Title"] = "Table Explorer";
+    ViewData["Title"] = "Table Explorer: " + Context.Request.Query["name"];
 
     var properties = Model.Type.GetProperties();
 }
 
+@section ContainerAttributes {
+    style="max-width: 100%;"
+}
+
 <h2>@ViewData["Title"]</h2>
+<h5>Item Type: @Model.Type.Name</h5>
 <p>
     <a class="btn btn-primary" asp-action="Index">BACK</a>
 </p>
