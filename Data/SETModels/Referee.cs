@@ -6,66 +6,66 @@ namespace KSIMonitor.Data.SETModels {
     [Table("referee")]
     public partial class Referee {
         [Column("id"), Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("titel"), StringLength(50)]
         public string Title { get; set; }
         [Column("vorname"), Required, StringLength(255)]
-        public string Vorname { get; set; }
+        public string FirstName { get; set; }
         [Column("nachname"), Required, StringLength(255)]
-        public string Nachname { get; set; }
+        public string LastName { get; set; }
         [Column("geburt", TypeName = "date")]
-        public DateTime Geburt { get; set; }
+        public DateTime BirthDate { get; set; }
         [Column("sichtbar")]
-        public int Sichtbar { get; set; }
+        public int Visible { get; set; }
         [Column("kyu")]
         public int? Kyu { get; set; }
         [Column("dan")]
         public int? Dan { get; set; }
         [Column("lizenznat", TypeName = "text")]
-        public string Lizenznat { get; set; }
+        public string Licensed { get; set; }
         [Column("geschlecht"), Required, StringLength(1)]
-        public string Geschlecht { get; set; }
+        public string Gender { get; set; }
         [Column("vereinnr")]
         public int AssociationID { get; set; }
         [Column("nationnr")]
-        public int? Nationnr { get; set; }
+        public int? NationID { get; set; }
         [Column("lizenzint", TypeName = "text")]
-        public string Lizenzint { get; set; }
+        public string LicenceInt { get; set; }
         [Column("lizenznr"), StringLength(255)]
-        public string Lizenznr { get; set; }
+        public string LicenceID { get; set; }
         [Column("email"), StringLength(255)]
         public string Email { get; set; }
         [Column("wkfid"), StringLength(100)]
-        public string Wkfid { get; set; }
+        public string WKFID { get; set; }
         [Column("passportid"), StringLength(50)]
-        public string Passportid { get; set; }
+        public string PassportID { get; set; }
         [Column("extid"), StringLength(30)]
-        public string Extid { get; set; }
+        public string ExtID { get; set; }
         [Column("exthasprivatecomment")]
-        public int? Exthasprivatecomment { get; set; }
+        public int? ExtHasPrivateComment { get; set; }
         [Column("exthaspubliccomment")]
-        public int? Exthaspubliccomment { get; set; }
+        public int? ExtHasPublicComment { get; set; }
         [Column("puuid"), StringLength(50)]
-        public string Puuid { get; set; }
+        public string PuuID { get; set; }
         [Column("datafield1"), StringLength(255)]
-        public string Datafield1 { get; set; }
+        public string DataField1 { get; set; }
         [Column("datafield2"), StringLength(255)]
-        public string Datafield2 { get; set; }
+        public string DataField2 { get; set; }
         [Column("datafield3"), StringLength(255)]
-        public string Datafield3 { get; set; }
+        public string DataField3 { get; set; }
         [Column("datafield4"), StringLength(255)]
-        public string Datafield4 { get; set; }
+        public string DataField4 { get; set; }
         [Column("datafield5"), StringLength(255)]
-        public string Datafield5 { get; set; }
+        public string DataField5 { get; set; }
         [Column("datafield6"), StringLength(255)]
-        public string Datafield6 { get; set; }
+        public string DataField6 { get; set; }
         [Column("datafield7"), StringLength(255)]
-        public string Datafield7 { get; set; }
+        public string DataField7 { get; set; }
         [Column("datafield8"), StringLength(255)]
-        public string Datafield8 { get; set; }
+        public string DataField8 { get; set; }
         [Column("datafield9"), StringLength(255)]
-        public string Datafield9 { get; set; }
+        public string DataField9 { get; set; }
         [Column("datafield10"), StringLength(255)]
-        public string Datafield10 { get; set; }
+        public string DataField10 { get; set; }
     }
 }

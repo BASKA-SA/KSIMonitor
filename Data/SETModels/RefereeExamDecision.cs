@@ -9,8 +9,8 @@ namespace KSIMonitor.Data.SETModels {
         [Column("decision")]
         public int Decision { get; set; }
         [Column("refid")]
-        public int Refid { get; set; }
+        public int RefereeID { get; set; }
         [Column("examid")]
-        public int Examid { get; set; }
+        public int ExamID { get; set; }
     }
 }

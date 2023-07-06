@@ -7,16 +7,16 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("examid")]
-        public int Examid { get; set; }
-        [Column("tewronganswers")]
-        public int Tewronganswers { get; set; }
-        [Column("pecriteriapoints", TypeName = "text")]
-        public string Pecriteriapoints { get; set; }
+        public int ExamID { get; set; }
         [Column("examinerid")]
-        public int Examinerid { get; set; }
+        public int ExaminerID { get; set; }
+        [Column("refid")]
+        public int RefereeID { get; set; }
         [Column("type")]
         public int Type { get; set; }
-        [Column("refid")]
-        public int Refid { get; set; }
+        [Column("tewronganswers")]
+        public int TeWrongAnswers { get; set; }
+        [Column("pecriteriapoints", TypeName = "text")]
+        public string PeCriteriaPoints { get; set; }
     }
 }

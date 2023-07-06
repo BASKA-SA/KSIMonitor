@@ -8,7 +8,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("katnr")]
-        public int Katnr { get; set; }
+        public int CategoryID { get; set; }
         [Column("nnr")]
         public int NameID { get; set; }
         [Column("time", TypeName = "timestamp")]

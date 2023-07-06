@@ -9,16 +9,16 @@ namespace KSIMonitor.Data.SETModels {
         [Column("katbez"), Required, StringLength(255)]
         public string Katbez { get; set; }
         [Column("alterVon")]
-        public int AlterVon { get; set; }
+        public int AgeFrom { get; set; }
         [Column("alternichtmehr")]
-        public int Alternichtmehr { get; set; }
+        public int AgeNotMoreThan { get; set; }
         [Column("geschlecht"), StringLength(1)]
-        public string Geschlecht { get; set; }
+        public string Gender { get; set; }
         [Column("team"), StringLength(1)]
         public string Team { get; set; }
         [Column("sportart")]
-        public int? Sportart { get; set; }
+        public int? SportArt { get; set; }
         [Column("typ")]
-        public int Typ { get; set; }
+        public int Type { get; set; }
     }
 }

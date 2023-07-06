@@ -10,39 +10,39 @@ namespace KSIMonitor.Data.SETModels {
         [Column("knr")]
         public int CategoryID { get; set; }
         [Column("alterVon")]
-        public int AlterVon { get; set; }
+        public int AgeFrom { get; set; }
         [Column("alternichtmehr")]
-        public int Alternichtmehr { get; set; }
+        public int AgeNotMoreThan { get; set; }
         [Column("startgeld")]
-        public float? Startgeld { get; set; }
+        public float? StartMoney { get; set; }
         [Column("teammin")]
-        public int? Teammin { get; set; }
+        public int? TeamMin { get; set; }
         [Column("teammax")]
-        public int? Teammax { get; set; }
+        public int? TeamMax { get; set; }
         [Column("resulttype")]
-        public int? Resulttype { get; set; }
+        public int? ResultType { get; set; }
         [Column("othercutoffday"), StringLength(20)]
-        public string Othercutoffday { get; set; }
+        public string OtherCutOffDay { get; set; }
         [Column("roundrobin")]
-        public int? Roundrobin { get; set; }
+        public int? RoundRobin { get; set; }
         [Column("pools")]
         public int? Pools { get; set; }
         [Column("drawmodesubmode")]
-        public int? Drawmodesubmode { get; set; }
+        public int? DrawModeSubMode { get; set; }
         [Column("needsize")]
-        public int Needsize { get; set; }
+        public int NeedSize { get; set; }
         [Column("needweight")]
-        public int Needweight { get; set; }
+        public int NeedWeight { get; set; }
         [Column("maxentries")]
-        public int Maxentries { get; set; }
+        public int MaxEntries { get; set; }
         [Column("kyufilter"), StringLength(50)]
-        public string Kyufilter { get; set; }
+        public string KyuFilter { get; set; }
         [Column("danfilter"), StringLength(50)]
-        public string Danfilter { get; set; }
+        public string DanFilter { get; set; }
         [Column("maxentriestotal")]
-        public int Maxentriestotal { get; set; }
+        public int MaxEntriesTotal { get; set; }
         [Column("isrankingcat")]
-        public int? Isrankingcat { get; set; }
+        public int? IsRankingCategory { get; set; }
         [Column("body_level")]
         public int? BodyLevel { get; set; }
         [Column("head_level")]
@@ -56,25 +56,25 @@ namespace KSIMonitor.Data.SETModels {
         [Column("rest_time"), StringLength(5)]
         public string RestTime { get; set; }
         [Column("goldenpoint_enable")]
-        public int? GoldenpointEnable { get; set; }
+        public int? GoldenPointEnable { get; set; }
         [Column("goldenpoint_time"), StringLength(5)]
-        public string GoldenpointTime { get; set; }
+        public string GoldenPointTime { get; set; }
         [Column("west_size"), StringLength(255)]
         public string WestSize { get; set; }
         [Column("weightmin")]
-        public float? Weightmin { get; set; }
+        public float? WeightMin { get; set; }
         [Column("weightmax")]
-        public float? Weightmax { get; set; }
+        public float? WeightMax { get; set; }
         [Column("shortname"), StringLength(50)]
-        public string Shortname { get; set; }
+        public string ShortName { get; set; }
         [Column("matchtype"), StringLength(20)]
-        public string Matchtype { get; set; }
+        public string MatchType { get; set; }
         [Column("seedmode")]
-        public int? Seedmode { get; set; }
+        public int? SeedMode { get; set; }
         [Column("matchform"), StringLength(255)]
-        public string Matchform { get; set; }
+        public string MatchForm { get; set; }
         [Column("scoremode")]
-        public int? Scoremode { get; set; }
+        public int? ScoreMode { get; set; }
         [Column("exrefselfass")]
         public int? Exrefselfass { get; set; }
         [Column("classedecane"), StringLength(100)]
@@ -84,9 +84,9 @@ namespace KSIMonitor.Data.SETModels {
         [Column("gradorallyobedience"), StringLength(255)]
         public string Gradorallyobedience { get; set; }
         [Column("refdeployment")]
-        public int? Refdeployment { get; set; }
+        public int? RefDeployment { get; set; }
         [Column("othercutoffdaystart"), StringLength(20)]
-        public string Othercutoffdaystart { get; set; }
+        public string OtherCutOffDayStart { get; set; }
         [Column("gradosdsfreestyle"), StringLength(255)]
         public string Gradosdsfreestyle { get; set; }
         [Column("gradosdsspeedwater"), StringLength(255)]
@@ -100,16 +100,16 @@ namespace KSIMonitor.Data.SETModels {
         [Column("classedecanesah"), StringLength(255)]
         public string Classedecanesah { get; set; }
         [Column("iwuf_difficulty")]
-        public int? IwufDifficulty { get; set; }
+        public int? IWUFDifficulty { get; set; }
         [Column("iwuf_compmovement")]
-        public int? IwufCompmovement { get; set; }
+        public int? IWUFCompmovement { get; set; }
         [Column("iwuf_adedtf")]
-        public int? IwufAdedtf { get; set; }
+        public int? IWUFAdedtf { get; set; }
         [Column("iwuf_style"), StringLength(255)]
-        public string IwufStyle { get; set; }
+        public string IWUFStyle { get; set; }
         [Column("iwuf_data"), StringLength(255)]
-        public string IwufData { get; set; }
+        public string IWUFData { get; set; }
         [Column("categoryfilter", TypeName = "text")]
-        public string Categoryfilter { get; set; }
+        public string CategoryFilter { get; set; }
     }
 }

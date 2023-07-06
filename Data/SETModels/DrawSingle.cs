@@ -17,6 +17,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("del")]
         public int? Del { get; set; }
         [Column("fieldpos")]
-        public int Fieldpos { get; set; }
+        public int FieldPos { get; set; }
     }
 }

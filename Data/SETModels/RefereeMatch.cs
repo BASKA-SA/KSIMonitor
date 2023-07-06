@@ -10,13 +10,13 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int? EventID { get; set; }
         [Column("refid")]
-        public int? Refid { get; set; }
+        public int? RefereeID { get; set; }
         [Column("matchid"), StringLength(50)]
-        public string Matchid { get; set; }
+        public string MatchID { get; set; }
         [Column("matcharea")]
-        public int? Matcharea { get; set; }
+        public int? MatchArea { get; set; }
         [Column("katnr")]
-        public int? Katnr { get; set; }
+        public int? CategoryID { get; set; }
         [Column("type")]
         public int? Type { get; set; }
         [Column("pool")]
@@ -24,14 +24,14 @@ namespace KSIMonitor.Data.SETModels {
         [Column("position")]
         public int? Position { get; set; }
         [Column("pointscore")]
-        public float? Pointscore { get; set; }
+        public float? PointScore { get; set; }
         [Column("flagscore")]
-        public int? Flagscore { get; set; }
+        public int? FlagScore { get; set; }
         [Column("puuid"), StringLength(50)]
-        public string Puuid { get; set; }
+        public string PuuID { get; set; }
         [Column("refposition")]
-        public int? Refposition { get; set; }
+        public int? RefereePosition { get; set; }
         [Column("lastchange", TypeName = "timestamp")]
-        public DateTime Lastchange { get; set; }
+        public DateTime LastChange { get; set; }
     }
 }

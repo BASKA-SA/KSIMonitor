@@ -5,7 +5,7 @@ namespace KSIMonitor.Data.SETModels {
     [Table("referee_category")]
     public partial class RefereeCategory {
         [Column("id"), Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("bezeichnung"), Required, StringLength(255)]
         public string Name { get; set; }
     }

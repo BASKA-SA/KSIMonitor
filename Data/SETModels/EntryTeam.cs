@@ -14,7 +14,7 @@ namespace KSIMonitor.Data.SETModels {
         public int AssociationID { get; set; }
         [Required]
         [Column("mannschaft", TypeName = "text")]
-        public string Mannschaft { get; set; }
+        public string Team { get; set; }
         [Column("gesetzt")]
         public int? Gesetzt { get; set; }
         [Column("time", TypeName = "timestamp")]

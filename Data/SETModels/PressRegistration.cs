@@ -8,19 +8,19 @@ namespace KSIMonitor.Data.SETModels {
         [Column("id"), Key]
         public uint ID { get; set; }
         [Column("firstname"), Required, StringLength(150)]
-        public string Firstname { get; set; }
+        public string FirstName { get; set; }
         [Column("lastname"), Required, StringLength(150)]
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
         [Column("medianame"), Required, StringLength(255)]
-        public string Medianame { get; set; }
+        public string MediaName { get; set; }
         [Column("type")]
         public int Type { get; set; }
         [Column("othertype"), StringLength(150)]
-        public string Othertype { get; set; }
+        public string OtherType { get; set; }
         [Column("functionname")]
-        public int Functionname { get; set; }
+        public int FunctionName { get; set; }
         [Column("otherfunction"), StringLength(255)]
-        public string Otherfunction { get; set; }
+        public string OtherFunction { get; set; }
         [Column("pressid"), StringLength(150)]
         public string PressID { get; set; }
         [Column("email"), Required, StringLength(255)]
@@ -30,20 +30,20 @@ namespace KSIMonitor.Data.SETModels {
         [Column("mobile"), StringLength(100)]
         public string Mobile { get; set; }
         [Column("countryid")]
-        public int Countryid { get; set; }
+        public int CountryID { get; set; }
         [Column("verid")]
-        public int Verid { get; set; }
+        public int EventID { get; set; }
         [Column("regtime", TypeName = "timestamp")]
-        public DateTime Regtime { get; set; }
+        public DateTime RegTime { get; set; }
         [Column("checkokentry")]
-        public int? Checkokentry { get; set; }
+        public int? CheckOkEntry { get; set; }
         [Column("checkcomentry", TypeName = "text")]
-        public string Checkcomentry { get; set; }
+        public string CheckComEntry { get; set; }
         [Column("accprinted")]
-        public int Accprinted { get; set; }
+        public int AccPrinted { get; set; }
         [Column("accprintedtime", TypeName = "timestamp")]
-        public DateTime? Accprintedtime { get; set; }
+        public DateTime? AccPrintedTime { get; set; }
         [Column("acccustom"), StringLength(255)]
-        public string Acccustom { get; set; }
+        public string AccCustom { get; set; }
     }
 }

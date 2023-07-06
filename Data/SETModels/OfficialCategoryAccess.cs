@@ -9,6 +9,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("accnr")]
         public int AccessID { get; set; }
         [Column("ocid")]
-        public int Ocid { get; set; }
+        public int OcID { get; set; }
     }
 }

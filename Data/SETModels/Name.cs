@@ -10,67 +10,67 @@ namespace KSIMonitor.Data.SETModels {
         [Column("name"), Required, StringLength(255)]
         public string Name1 { get; set; }
         [Column("geburt", TypeName = "date")]
-        public DateTime Geburt { get; set; }
+        public DateTime BirthDate { get; set; }
         [Column("vereinnr")]
         public int AssociationID { get; set; }
         [Column("geschlecht"), StringLength(1)]
-        public string Geschlecht { get; set; }
+        public string Gender { get; set; }
         [Column("gewicht")]
-        public int? Gewicht { get; set; }
+        public int? Weight { get; set; }
         [Column("groesse")]
-        public int? Groesse { get; set; }
+        public int? Height { get; set; }
         [Column("sichtbar")]
-        public uint Sichtbar { get; set; }
+        public uint Visible { get; set; }
         [Column("kyu")]
         public int? Kyu { get; set; }
         [Column("dan")]
         public int? Dan { get; set; }
         [Column("nationnr")]
-        public int? Nationnr { get; set; }
+        public int? NationID { get; set; }
         [Column("stpktnr")]
-        public int? Stpktnr { get; set; }
+        public int? StpktID { get; set; }
         [Column("nationalid"), StringLength(30)]
         public string NationalID { get; set; }
         [Column("email"), StringLength(255)]
         public string Email { get; set; }
         [Column("sonstiges", TypeName = "text")]
-        public string Sonstiges { get; set; }
+        public string Misc { get; set; }
         [Column("wkfid"), StringLength(100)]
-        public string WkfID { get; set; }
+        public string WKFID { get; set; }
         [Column("passportid"), StringLength(50)]
         public string PassportID { get; set; }
         [Column("extid"), StringLength(30)]
         public string ExtID { get; set; }
         [Column("exthasprivatecomment")]
-        public int? Exthasprivatecomment { get; set; }
+        public int? ExtHasPrivateComment { get; set; }
         [Column("exthaspubliccomment")]
-        public int? Exthaspubliccomment { get; set; }
+        public int? ExtHasPublicComment { get; set; }
         [Column("puuid"), StringLength(50)]
         public string PuuID { get; set; }
         [Column("exttype"), StringLength(50)]
         public string ExtType { get; set; }
         [Column("isnohuman")]
-        public int? Isnohuman { get; set; }
+        public int? IsNoHuman { get; set; }
         [Column("datafield1"), StringLength(255)]
-        public string Datafield1 { get; set; }
+        public string DataField1 { get; set; }
         [Column("datafield2"), StringLength(255)]
-        public string Datafield2 { get; set; }
+        public string DataField2 { get; set; }
         [Column("datafield3"), StringLength(255)]
-        public string Datafield3 { get; set; }
+        public string DataField3 { get; set; }
         [Column("datafield4"), StringLength(255)]
-        public string Datafield4 { get; set; }
+        public string DataField4 { get; set; }
         [Column("datafield5"), StringLength(255)]
-        public string Datafield5 { get; set; }
+        public string DataField5 { get; set; }
         [Column("datafield6"), StringLength(255)]
-        public string Datafield6 { get; set; }
+        public string DataField6 { get; set; }
         [Column("datafield7"), StringLength(255)]
-        public string Datafield7 { get; set; }
+        public string DataField7 { get; set; }
         [Column("datafield8"), StringLength(255)]
-        public string Datafield8 { get; set; }
+        public string DataField8 { get; set; }
         [Column("datafield9"), StringLength(255)]
-        public string Datafield9 { get; set; }
+        public string DataField9 { get; set; }
         [Column("datafield10"), StringLength(255)]
-        public string Datafield10 { get; set; }
+        public string DataField10 { get; set; }
         [Column("accountenabled")]
         public int? AccountEnabled { get; set; }
         [Column("accountusername"), StringLength(50)]

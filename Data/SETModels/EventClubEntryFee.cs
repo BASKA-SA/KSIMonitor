@@ -11,15 +11,15 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vereinnr")]
         public int AssociationID { get; set; }
         [Column("paidammount")]
-        public float? Paidammount { get; set; }
-        [Column("comment"), StringLength(255)]
-        public string Comment { get; set; }
+        public float? PaidAmount { get; set; }
         [Column("changes")]
         public int Changes { get; set; }
         [Column("discount")]
         public float? Discount { get; set; }
         [Column("notificationsent", TypeName = "date")]
         public DateTime? Notificationsent { get; set; }
+        [Column("comment"), StringLength(255)]
+        public string Comment { get; set; }
         [Column("comment2", TypeName = "text")]
         public string Comment2 { get; set; }
     }

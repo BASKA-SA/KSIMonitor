@@ -7,7 +7,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("wid")]
-        public int Wid { get; set; }
+        public int WID { get; set; }
         [Column("rate")]
         public float Rate { get; set; }
     }

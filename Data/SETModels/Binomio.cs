@@ -14,7 +14,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("created", TypeName = "timestamp")]
         public DateTime Created { get; set; }
         [Column("clubid")]
-        public int Clubid { get; set; }
+        public int ClubID { get; set; }
         [Column("status")]
         public int Status { get; set; }
         [Column("rally")]

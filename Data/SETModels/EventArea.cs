@@ -9,27 +9,27 @@ namespace KSIMonitor.Data.SETModels {
         public int EventID { get; set; }
         [Column("accnr")]
         public int AccessID { get; set; }
+        [Column("nr")]
+        public int? ID { get; set; }
         [Column("kurzbez"), Required, StringLength(5)]
         public string Kurzbez { get; set; }
-        [Column("nr")]
-        public int? Nr { get; set; }
         [Column("athletesallowed")]
-        public int? Athletesallowed { get; set; }
+        public int? AthletesAllowed { get; set; }
         [Column("coachesallowed")]
-        public int? Coachesallowed { get; set; }
-        [Column("refereesallowed")]
-        public int? Refereesallowed { get; set; }
-        [Column("officialsallowed")]
-        public int? Officialsallowed { get; set; }
-        [Column("offcatsallowed")]
-        public int? Offcatsallowed { get; set; }
-        [Column("pressallowed")]
-        public int? Pressallowed { get; set; }
-        [Column("presstypeallowed")]
-        public int? Presstypeallowed { get; set; }
+        public int? CoachesAllowed { get; set; }
         [Column("coachcatsallowed")]
-        public int? Coachcatsallowed { get; set; }
+        public int? CoachCategoriesAllowed { get; set; }
+        [Column("refereesallowed")]
+        public int? RefereesAllowed { get; set; }
         [Column("refereecatsallowed")]
-        public int? Refereecatsallowed { get; set; }
+        public int? RefereeCategoriesAllowed { get; set; }
+        [Column("officialsallowed")]
+        public int? OfficialsAllowed { get; set; }
+        [Column("offcatsallowed")]
+        public int? OfficialCategoriesAllowed { get; set; }
+        [Column("pressallowed")]
+        public int? PressAllowed { get; set; }
+        [Column("presstypeallowed")]
+        public int? PressTypeAllowed { get; set; }
     }
 }

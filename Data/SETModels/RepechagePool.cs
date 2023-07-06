@@ -5,7 +5,7 @@ namespace KSIMonitor.Data.SETModels {
     [Table("trostrunde_pool"), Keyless]
     public partial class RepechagePool {
         [Column("id")]
-        public long Id { get; set; }
+        public long ID { get; set; }
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("knr")]

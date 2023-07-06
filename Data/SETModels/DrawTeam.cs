@@ -12,7 +12,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vereinnr")]
         public int AssociationID { get; set; }
         [Column("mannschaft", TypeName = "text"), Required]
-        public string Mannschaft { get; set; }
+        public string Team { get; set; }
         [Column("pos")]
         public int Pos { get; set; }
         [Column("pool")]
@@ -20,6 +20,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("del")]
         public int? Del { get; set; }
         [Column("fieldpos")]
-        public int Fieldpos { get; set; }
+        public int FieldPos { get; set; }
     }
 }

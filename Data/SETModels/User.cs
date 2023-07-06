@@ -10,58 +10,58 @@ namespace KSIMonitor.Data.SETModels {
         [Column("user"), StringLength(50)]
         public string Username { get; set; }
         [Column("passwort"), Required, StringLength(50)]
-        public string Passwort { get; set; }
+        public string Password { get; set; }
         [Column("email"), StringLength(255)]
         public string Email { get; set; }
         [Column("gesperrt")]
-        public int Gesperrt { get; set; }
+        public int Blocked { get; set; }
         [Column("titel"), StringLength(50)]
         public string Title { get; set; }
         [Column("vorname"), StringLength(100)]
-        public string Vorname { get; set; }
+        public string FirstName { get; set; }
         [Column("nachname"), StringLength(100)]
-        public string Nachname { get; set; }
+        public string LastName { get; set; }
         [Column("geburtstag", TypeName = "date")]
-        public DateTime? Geburtstag { get; set; }
+        public DateTime? BirthDate { get; set; }
         [Column("adresse"), StringLength(255)]
-        public string Adresse { get; set; }
+        public string Address { get; set; }
         [Column("plz"), StringLength(50)]
-        public string Plz { get; set; }
+        public string PostCode { get; set; }
         [Column("ort"), StringLength(50)]
-        public string Ort { get; set; }
+        public string City { get; set; }
         [Column("nation")]
-        public int? Nation { get; set; }
+        public int? NationID { get; set; }
         [Column("telefon"), StringLength(50)]
-        public string Telefon { get; set; }
+        public string PhoneNumber { get; set; }
         [Column("fax"), StringLength(50)]
         public string Fax { get; set; }
         [Column("mobiltelefon"), StringLength(50)]
-        public string Mobiltelefon { get; set; }
+        public string CellNumber { get; set; }
         [Column("create", TypeName = "timestamp")]
-        public DateTime Create { get; set; }
+        public DateTime Created { get; set; }
         [Column("aktiv")]
-        public int Aktiv { get; set; }
+        public int Active { get; set; }
         [Column("billingaddress", TypeName = "text")]
-        public string Billingaddress { get; set; }
+        public string BillingAddress { get; set; }
         [Column("mandant")]
-        public int Mandant { get; set; }
+        public int Client { get; set; }
         [Column("autopayment")]
-        public int Autopayment { get; set; }
+        public int AutoPayment { get; set; }
         [Column("paypalaccount"), StringLength(255)]
-        public string Paypalaccount { get; set; }
+        public string PayPalAccount { get; set; }
         [Column("bankaccount", TypeName = "text")]
-        public string Bankaccount { get; set; }
+        public string BankAccount { get; set; }
         [Column("extregoption")]
-        public int? Extregoption { get; set; }
+        public int? ExtRegOption { get; set; }
         [Column("gestpayshoplogin"), StringLength(30)]
-        public string Gestpayshoplogin { get; set; }
+        public string GestPayShopLogin { get; set; }
         [Column("privacypolicyagree")]
-        public int Privacypolicyagree { get; set; }
+        public int PrivacyPolicyAgree { get; set; }
         [Column("privacypolicyagreedate", TypeName = "timestamp")]
-        public DateTime Privacypolicyagreedate { get; set; }
+        public DateTime PrivacyPolicyAgreeDate { get; set; }
         [Column("stripepk"), StringLength(255)]
-        public string Stripepk { get; set; }
+        public string StripePK { get; set; }
         [Column("stripesk"), StringLength(255)]
-        public string Stripesk { get; set; }
+        public string StripeSK { get; set; }
     }
 }

@@ -13,9 +13,9 @@ namespace KSIMonitor.Data.SETModels {
         [Column("sex"), StringLength(1)]
         public string Sex { get; set; }
         [Column("catname"), StringLength(255)]
-        public string Catname { get; set; }
+        public string CategoryName { get; set; }
         [Column("fighttime")]
-        public int Fighttime { get; set; }
+        public int FightTime { get; set; }
         [Column("color"), StringLength(7)]
         public string Color { get; set; }
     }

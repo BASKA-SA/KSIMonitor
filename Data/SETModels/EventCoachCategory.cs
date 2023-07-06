@@ -9,7 +9,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("id")]
         public int ID { get; set; }
         [Column("maxentries")]
-        public int? Maxentries { get; set; }
+        public int? MaxEntries { get; set; }
         [Column("fee")]
         public float? Fee { get; set; }
     }

@@ -5,7 +5,7 @@ namespace KSIMonitor.Data.SETModels {
     [Table("veranstaltung_headofdelegation"), Keyless]
     public partial class EventHeadOfDelegation {
         [Column("veranstaltung_id")]
-        public uint VeranstaltungID { get; set; }
+        public uint EventID { get; set; }
         [Column("club_id")]
         public uint ClubID { get; set; }
         [Column("person_id")]

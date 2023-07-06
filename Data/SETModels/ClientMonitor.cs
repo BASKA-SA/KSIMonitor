@@ -13,9 +13,9 @@ namespace KSIMonitor.Data.SETModels {
         [Column("name"), StringLength(100)]
         public string Name { get; set; }
         [Column("creation", TypeName = "timestamp")]
-        public DateTime Creation { get; set; }
+        public DateTime Created { get; set; }
         [Column("expire", TypeName = "timestamp")]
-        public DateTime Expire { get; set; }
+        public DateTime Expires { get; set; }
         [Column("message", TypeName = "text")]
         public string Message { get; set; }
         [Column("verid")]

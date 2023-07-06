@@ -10,65 +10,65 @@ namespace KSIMonitor.Data.SETModels {
         [Column("bezeichnung"), Required, StringLength(255)]
         public string Name { get; set; }
         [Column("verdatum"), Required, StringLength(20)]
-        public string Verdatum { get; set; }
+        public string Date { get; set; }
         [Column("nennstart"), Required, StringLength(20)]
-        public string Nennstart { get; set; }
+        public string EntryStart { get; set; }
         [Column("nennende"), Required, StringLength(20)]
-        public string Nennende { get; set; }
+        public string EntryEnd { get; set; }
         [Column("user")]
         public int? User { get; set; }
         [Column("gesperrt")]
-        public uint Gesperrt { get; set; }
+        public uint Blocked { get; set; }
         [Column("info", TypeName = "text")]
         public string Info { get; set; }
         [Column("passwd"), StringLength(50)]
-        public string Passwd { get; set; }
+        public string Password { get; set; }
         [Column("offen")]
-        public int? Offen { get; set; }
+        public int? Open { get; set; }
         [Column("showstarter")]
-        public int? Showstarter { get; set; }
+        public int? ShowStarter { get; set; }
         [Column("regmode")]
-        public int? Regmode { get; set; }
+        public int? RegMode { get; set; }
         [Column("adresse"), StringLength(255)]
-        public string Adresse { get; set; }
+        public string Address { get; set; }
         [Column("auslosungen")]
-        public int? Auslosungen { get; set; }
+        public int? Draws { get; set; }
         [Column("land")]
-        public uint Land { get; set; }
+        public uint Country { get; set; }
         [Column("lastchange", TypeName = "timestamp")]
-        public DateTime Lastchange { get; set; }
+        public DateTime LastChange { get; set; }
         [Column("limitedto")]
-        public int? Limitedto { get; set; }
+        public int? LimitedTo { get; set; }
         [Column("deletetodraw")]
-        public int? Deletetodraw { get; set; }
+        public int? DeleteToDraw { get; set; }
         [Column("waehrung")]
-        public int Waehrung { get; set; }
+        public int Currency { get; set; }
         [Column("typ")]
-        public int? Typ { get; set; }
+        public int? Type { get; set; }
         [Column("lat"), StringLength(50)]
         public string Lat { get; set; }
         [Column("lon"), StringLength(50)]
         public string Lon { get; set; }
         [Column("liveblog")]
-        public int Liveblog { get; set; }
+        public int LiveBlog { get; set; }
         [Column("indlimitclub")]
-        public int Indlimitclub { get; set; }
+        public int IndividualLimitClub { get; set; }
         [Column("teamlimitclub")]
-        public int Teamlimitclub { get; set; }
+        public int TeamLimitClub { get; set; }
         [Column("usepaypal")]
-        public int? Usepaypal { get; set; }
+        public int? UsePayPal { get; set; }
         [Column("paypalaccount"), StringLength(255)]
-        public string Paypalaccount { get; set; }
+        public string PayPalAccount { get; set; }
         [Column("paypalnoamount")]
-        public int? Paypalnoamount { get; set; }
+        public int? PayPalNoAmount { get; set; }
         [Column("systemtype"), StringLength(150)]
-        public string Systemtype { get; set; }
+        public string SystemType { get; set; }
         [Column("bisdatum"), StringLength(20)]
-        public string Bisdatum { get; set; }
+        public string BillDate { get; set; }
         [Column("hidefromcalendar")]
-        public int? Hidefromcalendar { get; set; }
+        public int? HideFromCalendar { get; set; }
         [Column("googlecalid"), StringLength(250)]
-        public string Googlecalid { get; set; }
+        public string GoogleCalendarID { get; set; }
         [Column("invoiced")]
         public int? Invoiced { get; set; }
         [Column("paid")]
@@ -76,35 +76,35 @@ namespace KSIMonitor.Data.SETModels {
         [Column("international")]
         public int? International { get; set; }
         [Column("infoevent")]
-        public int Infoevent { get; set; }
+        public int InfoEvent { get; set; }
         [Column("useothercutoffday")]
-        public int? Useothercutoffday { get; set; }
+        public int? UseOtherCutoffDay { get; set; }
         [Column("othercutoffday"), StringLength(20)]
-        public string Othercutoffday { get; set; }
+        public string OtherCutoffDay { get; set; }
         [Column("entrylimit")]
-        public int Entrylimit { get; set; }
+        public int EntryLimit { get; set; }
         [Column("premiumevent")]
-        public int? Premiumevent { get; set; }
+        public int? PremiumEvent { get; set; }
         [Column("ticketshopurl"), StringLength(255)]
-        public string Ticketshopurl { get; set; }
+        public string TicketShopURL { get; set; }
         [Column("hiderefereeentries")]
-        public int? Hiderefereeentries { get; set; }
+        public int? HideRefereeEntries { get; set; }
         [Column("allentriesonwaitinglist")]
-        public int? Allentriesonwaitinglist { get; set; }
+        public int? AllEntriesOnWaitingList { get; set; }
         [Column("usebothcutoffdates")]
-        public int? Usebothcutoffdates { get; set; }
+        public int? UseBothCutoffDates { get; set; }
         [Column("livedtm")]
-        public int? Livedtm { get; set; }
+        public int? LiveDTM { get; set; }
         [Column("coachlimitclub")]
-        public int Coachlimitclub { get; set; }
+        public int CoachLimitClub { get; set; }
         [Column("refereelimitclub")]
-        public int Refereelimitclub { get; set; }
+        public int RefereeLimitClub { get; set; }
         [Column("officiallimitclub")]
-        public int Officiallimitclub { get; set; }
+        public int OfficialLimitClub { get; set; }
         [Column("usedisclaimer")]
-        public int? Usedisclaimer { get; set; }
+        public int? UseDisclaimer { get; set; }
         [Column("eventcontactemail"), StringLength(255)]
-        public string Eventcontactemail { get; set; }
+        public string EventContactEmail { get; set; }
         [Column("timezone"), StringLength(50)]
         public string Timezone { get; set; }
         [Column("livestream")]
@@ -112,228 +112,228 @@ namespace KSIMonitor.Data.SETModels {
         [Column("hotel")]
         public int? Hotel { get; set; }
         [Column("appsyncevent")]
-        public int? Appsyncevent { get; set; }
+        public int? AppSyncEvent { get; set; }
         [Column("appsynccat")]
-        public int? Appsynccat { get; set; }
+        public int? AppSyncCategory { get; set; }
         [Column("appsyncclub")]
-        public int? Appsyncclub { get; set; }
+        public int? AppSyncClub { get; set; }
         [Column("puuid"), StringLength(50)]
         public string Puuid { get; set; }
         [Column("headofdelegation")]
-        public int? Headofdelegation { get; set; }
+        public int? HeadOfDelegation { get; set; }
         [Column("hideindreg")]
-        public int? Hideindreg { get; set; }
+        public int? HideIndividualRegistrations { get; set; }
         [Column("hideteamreg")]
-        public int? Hideteamreg { get; set; }
+        public int? HideTeamRegistrations { get; set; }
         [Column("hidecoachreg")]
-        public int? Hidecoachreg { get; set; }
+        public int? HideCoachRegistrations { get; set; }
         [Column("hiderefereereg")]
-        public int? Hiderefereereg { get; set; }
+        public int? HideRefereeRegistrations { get; set; }
         [Column("hideofficialreg")]
-        public int? Hideofficialreg { get; set; }
+        public int? HideOfficialRegistrations { get; set; }
         [Column("bankaccount", TypeName = "text")]
-        public string Bankaccount { get; set; }
+        public string BankAccount { get; set; }
         [Column("usebankaccount")]
-        public int Usebankaccount { get; set; }
+        public int UseBankAccount { get; set; }
         [Column("hidecoachentries")]
-        public int? Hidecoachentries { get; set; }
+        public int? HideCoachEntries { get; set; }
         [Column("hideofficialentries")]
-        public int? Hideofficialentries { get; set; }
+        public int? HideOfficialEntries { get; set; }
         [Column("hideathleteentries")]
-        public int? Hideathleteentries { get; set; }
+        public int? HideAthleteEntries { get; set; }
         [Column("linkevent")]
-        public int Linkevent { get; set; }
+        public int LinkEvent { get; set; }
         [Column("linkeventurl"), StringLength(255)]
-        public string Linkeventurl { get; set; }
+        public string LinkEventURL { get; set; }
         [Column("extregistrationmode")]
-        public int? Extregistrationmode { get; set; }
+        public int? ExternalRegistrationMode { get; set; }
         [Column("extregistrationmoderoles"), StringLength(100)]
-        public string Extregistrationmoderoles { get; set; }
+        public string ExternalRegistrationModeRoles { get; set; }
         [Column("billingaddress", TypeName = "text")]
-        public string Billingaddress { get; set; }
+        public string BillingAddress { get; set; }
         [Column("usebillingaddress")]
-        public int? Usebillingaddress { get; set; }
+        public int? UseBillingAddress { get; set; }
         [Column("useranking")]
-        public int Useranking { get; set; }
+        public int UseRanking { get; set; }
         [Column("paypalextrafee")]
-        public float? Paypalextrafee { get; set; }
+        public float? PaypalExtraFee { get; set; }
         [Column("allentriesonwaitinglistcoach")]
-        public int Allentriesonwaitinglistcoach { get; set; }
+        public int AllEntriesOnWaitingListCoach { get; set; }
         [Column("allentriesonwaitinglistreferee")]
-        public int Allentriesonwaitinglistreferee { get; set; }
+        public int AllEntriesOnWaitingListReferee { get; set; }
         [Column("allentriesonwaitinglistofficial")]
-        public int Allentriesonwaitinglistofficial { get; set; }
+        public int AllEntriesOnWaitingListOfficial { get; set; }
         [Column("entrylimitreferee")]
-        public int Entrylimitreferee { get; set; }
+        public int EntryLimitReferee { get; set; }
         [Column("entrylimitofficial")]
-        public int Entrylimitofficial { get; set; }
+        public int EntryLimitOfficial { get; set; }
         [Column("waitinglistpublic")]
-        public int Waitinglistpublic { get; set; }
+        public int WaitingListPublic { get; set; }
         [Column("entrylimitcoach")]
-        public int Entrylimitcoach { get; set; }
+        public int EntryLimitCoach { get; set; }
         [Column("enablepressregistration")]
-        public int Enablepressregistration { get; set; }
+        public int EnablePressRegistration { get; set; }
         [Column("extregistrationnopermission")]
-        public int? Extregistrationnopermission { get; set; }
+        public int? ExternalRegistrationNoPermission { get; set; }
         [Column("paypalextrafeepercentage")]
-        public float? Paypalextrafeepercentage { get; set; }
+        public float? PaypalExtraFeePercentage { get; set; }
         [Column("smfacebook"), StringLength(255)]
-        public string Smfacebook { get; set; }
+        public string SMFacebook { get; set; }
         [Column("smwebsite"), StringLength(255)]
-        public string Smwebsite { get; set; }
+        public string SMWebsite { get; set; }
         [Column("smtwitter"), StringLength(255)]
-        public string Smtwitter { get; set; }
+        public string SMTwitter { get; set; }
         [Column("smyoutube"), StringLength(255)]
-        public string Smyoutube { get; set; }
+        public string SMYoutube { get; set; }
         [Column("smflickr"), StringLength(255)]
-        public string Smflickr { get; set; }
+        public string SMFlickr { get; set; }
         [Column("smgoogle"), StringLength(255)]
-        public string Smgoogle { get; set; }
+        public string SMGoogle { get; set; }
         [Column("sminstagram"), StringLength(255)]
-        public string Sminstagram { get; set; }
+        public string SMInstagram { get; set; }
         [Column("extregistrationintrefereeonly")]
-        public int Extregistrationintrefereeonly { get; set; }
+        public int ExternalRegistrationIntRefereeOnly { get; set; }
         [Column("extregistrationintcoachonly")]
-        public int Extregistrationintcoachonly { get; set; }
+        public int ExternalRegistrationIntCoachOnly { get; set; }
         [Column("starttime"), StringLength(20)]
-        public string Starttime { get; set; }
+        public string StartTime { get; set; }
         [Column("endtime"), StringLength(20)]
-        public string Endtime { get; set; }
+        public string EndTime { get; set; }
         [Column("regstarttime"), StringLength(20)]
-        public string Regstarttime { get; set; }
+        public string RegStartTime { get; set; }
         [Column("regendtime"), StringLength(20)]
-        public string Regendtime { get; set; }
+        public string RegEndTime { get; set; }
         [Column("extid")]
         public int ExtID { get; set; }
         [Column("cartkeepopenafterdeadline")]
-        public int? Cartkeepopenafterdeadline { get; set; }
+        public int? CartKeepOpenAfterDeadline { get; set; }
         [Column("hidemedalstatistic")]
-        public int? Hidemedalstatistic { get; set; }
+        public int? HideMedalStatistic { get; set; }
         [Column("noteinfo", TypeName = "text")]
-        public string Noteinfo { get; set; }
+        public string NoteInfo { get; set; }
         [Column("noteshow")]
-        public int? Noteshow { get; set; }
+        public int? NoteShow { get; set; }
         [Column("showstarteronlybypermission")]
-        public int Showstarteronlybypermission { get; set; }
+        public int ShowStarterOnlyByPermission { get; set; }
         [Column("showdrawsonlybypermission")]
-        public int Showdrawsonlybypermission { get; set; }
+        public int ShowDrawsOnlyByPermission { get; set; }
         [Column("usegestpay")]
-        public int Usegestpay { get; set; }
+        public int UseGestPay { get; set; }
         [Column("gestpayshoplogin"), StringLength(30)]
-        public string Gestpayshoplogin { get; set; }
+        public string GestPayShopLogin { get; set; }
         [Column("gestpaynoamount")]
-        public int Gestpaynoamount { get; set; }
+        public int GestPayNoAmount { get; set; }
         [Column("gestpayextrafee")]
-        public float Gestpayextrafee { get; set; }
+        public float GestPayExtraFee { get; set; }
         [Column("gestpayextrafeepercentage")]
-        public float Gestpayextrafeepercentage { get; set; }
+        public float GestPayExtraFeePercentage { get; set; }
         [Column("limitindathlete")]
-        public int Limitindathlete { get; set; }
+        public int LimitIndividualathlete { get; set; }
         [Column("limitindathlete_waitinglist")]
-        public int LimitindathleteWaitinglist { get; set; }
+        public int LimitIndividualAthleteWaitingList { get; set; }
         [Column("indlimitcountry")]
-        public int Indlimitcountry { get; set; }
+        public int IndividualLimitCountry { get; set; }
         [Column("indentryusesportsid")]
-        public int Indentryusesportsid { get; set; }
+        public int IndividualEntryUseSportsID { get; set; }
         [Column("indentryuserankingtoprank")]
-        public int Indentryuserankingtoprank { get; set; }
+        public int IndividualEntryUseRankingTopRank { get; set; }
         [Column("indentryuserankingtoprankendate"), StringLength(20)]
-        public string Indentryuserankingtoprankendate { get; set; }
+        public string IndividualEntryUserankingTopRankEndate { get; set; }
         [Column("paypalwlautoapproveonpayment")]
-        public int Paypalwlautoapproveonpayment { get; set; }
+        public int PayPalWLAutoApproveOnPayment { get; set; }
         [Column("gestpaywlautoapproveonpayment")]
-        public int Gestpaywlautoapproveonpayment { get; set; }
+        public int GestPayWLAutoApproveOnPayment { get; set; }
         [Column("enablewlpaymententryremover")]
-        public int Enablewlpaymententryremover { get; set; }
+        public int EnableWLPaymentEntryRemover { get; set; }
         [Column("wlpaymententryremovermaxminutes")]
-        public int Wlpaymententryremovermaxminutes { get; set; }
+        public int WLPaymentEntryRemoverMaxMinutes { get; set; }
         [Column("exttypefilter"), StringLength(150)]
-        public string Exttypefilter { get; set; }
+        public string ExtTypeFilter { get; set; }
         [Column("eventagegeneralfrom", TypeName = "date")]
-        public DateTime? Eventagegeneralfrom { get; set; }
+        public DateTime? EventAgeGeneralFrom { get; set; }
         [Column("eventagegeneralto", TypeName = "date")]
-        public DateTime? Eventagegeneralto { get; set; }
+        public DateTime? EventAgeGeneralTo { get; set; }
         [Column("custompaymenturl"), StringLength(255)]
-        public string Custompaymenturl { get; set; }
+        public string CustomPaymentUrl { get; set; }
         [Column("showstartercountonly")]
-        public int? Showstartercountonly { get; set; }
+        public int? ShowStarterCountOnly { get; set; }
         [Column("usepaypaldonationbutton")]
-        public int? Usepaypaldonationbutton { get; set; }
+        public int? UsePayPalDonationButton { get; set; }
         [Column("scoremode")]
-        public int Scoremode { get; set; }
+        public int ScoreMode { get; set; }
         [Column("hideresultlist")]
-        public int? Hideresultlist { get; set; }
+        public int? HideResultList { get; set; }
         [Column("photouploadkey"), StringLength(50)]
-        public string Photouploadkey { get; set; }
+        public string PhotoUploadKey { get; set; }
         [Column("indentryshowrankingpos")]
-        public int? Indentryshowrankingpos { get; set; }
+        public int? IndividualEntryShowRankingPos { get; set; }
         [Column("extsystems"), StringLength(255)]
-        public string Extsystems { get; set; }
+        public string ExtSystems { get; set; }
         [Column("showathleteprofilespublic")]
-        public int? Showathleteprofilespublic { get; set; }
+        public int? ShowAthleteProfilesPublic { get; set; }
         [Column("usestripe")]
-        public int Usestripe { get; set; }
+        public int UseStripe { get; set; }
         [Column("stripepubkey"), StringLength(255)]
-        public string Stripepubkey { get; set; }
+        public string StripePubKey { get; set; }
         [Column("stripeseckey"), StringLength(255)]
-        public string Stripeseckey { get; set; }
+        public string StripeSecKey { get; set; }
         [Column("stripewlautoapproveonpayment")]
-        public int Stripewlautoapproveonpayment { get; set; }
+        public int StripeWLAutoApproveOnPayment { get; set; }
         [Column("etrefereeselfassignment")]
-        public int Etrefereeselfassignment { get; set; }
+        public int EtRefereeSelfAssignment { get; set; }
         [Column("etrefereeselfassignment_onepercountry")]
-        public int? EtrefereeselfassignmentOnepercountry { get; set; }
+        public int? EtRefereeSelfAssignmentOnePerCountry { get; set; }
         [Column("enablevolunteerregistration")]
-        public int? Enablevolunteerregistration { get; set; }
+        public int? EnableVolunteerRegistration { get; set; }
         [Column("usematchnumbercodes")]
-        public int? Usematchnumbercodes { get; set; }
+        public int? UseMatchNumberCodes { get; set; }
         [Column("usematchnumbercodestime")]
-        public int? Usematchnumbercodestime { get; set; }
+        public int? UseMatchNumberCodesTime { get; set; }
         [Column("extregsysteminfotext", TypeName = "text")]
-        public string Extregsysteminfotext { get; set; }
+        public string ExtRegSystemInfoText { get; set; }
         [Column("useallmatchcodes")]
-        public int? Useallmatchcodes { get; set; }
+        public int? UseAllMatchCodes { get; set; }
         [Column("superlicenseevent")]
-        public int? Superlicenseevent { get; set; }
+        public int? SuperLicenseEvent { get; set; }
         [Column("adminallowrefereescores")]
-        public int? Adminallowrefereescores { get; set; }
+        public int? AdminAllowRefereeScores { get; set; }
         [Column("extsystemswhitelist"), StringLength(255)]
-        public string Extsystemswhitelist { get; set; }
+        public string ExtSystemsWhiteList { get; set; }
         [Column("resultscustomurl"), StringLength(255)]
-        public string Resultscustomurl { get; set; }
+        public string ResultsCustomURL { get; set; }
         [Column("medalscustomurl"), StringLength(255)]
-        public string Medalscustomurl { get; set; }
+        public string MedalsCustomURL { get; set; }
         [Column("enablewlpaymententryremover_coach")]
-        public int EnablewlpaymententryremoverCoach { get; set; }
+        public int EnableWLPaymentEntryRemoverCoach { get; set; }
         [Column("wlpaymententryremovermaxminutes_coach")]
-        public int WlpaymententryremovermaxminutesCoach { get; set; }
+        public int WLPaymentEntryRemoverMaxMinutesCoach { get; set; }
         [Column("enablewlpaymententryremover_referee")]
-        public int EnablewlpaymententryremoverReferee { get; set; }
+        public int EnableWLPaymentEntryRemoverReferee { get; set; }
         [Column("wlpaymententryremovermaxminutes_referee")]
-        public int WlpaymententryremovermaxminutesReferee { get; set; }
+        public int WLPaymentEntryRemoverMaxMinutesReferee { get; set; }
         [Column("enablewlpaymententryremover_official")]
-        public int EnablewlpaymententryremoverOfficial { get; set; }
+        public int EnableWLPaymentEntryRemoverOfficial { get; set; }
         [Column("wlpaymententryremovermaxminutes_official")]
-        public int WlpaymententryremovermaxminutesOfficial { get; set; }
+        public int WLPaymentEntryRemoverMaxMinutesOfficial { get; set; }
         [Column("indentryuserankingtoprankfrom")]
-        public int Indentryuserankingtoprankfrom { get; set; }
+        public int IndividualEntryUseRankingTopRankFrom { get; set; }
         [Column("eventcode"), StringLength(20)]
-        public string Eventcode { get; set; }
+        public string EventCode { get; set; }
         [Column("athletelimitfilter", TypeName = "text")]
-        public string Athletelimitfilter { get; set; }
+        public string AthleteLimitFilter { get; set; }
         [Column("indentryuserankingtoprankfrom_checkothercategories")]
-        public int? IndentryuserankingtoprankfromCheckothercategories { get; set; }
+        public int? IndividualEntryUseRankingTopRankFrom_CheckOtherCategories { get; set; }
         [Column("custommap", TypeName = "text")]
-        public string Custommap { get; set; }
+        public string CustomMap { get; set; }
         [Column("region")]
         public int? Region { get; set; }
         [Column("cattotallimitputwlcat")]
-        public int? Cattotallimitputwlcat { get; set; }
+        public int? CategoryTotalLimitPutWLCat { get; set; }
         [Column("disableentrydelete")]
-        public int? Disableentrydelete { get; set; }
+        public int? DisableEntryDelete { get; set; }
         [Column("disableentrydeletewl")]
-        public int? Disableentrydeletewl { get; set; }
+        public int? DisableEntryDeleteWL { get; set; }
         [Column("categoryfilter", TypeName = "text")]
-        public string Categoryfilter { get; set; }
+        public string CategoryFilter { get; set; }
     }
 }

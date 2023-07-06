@@ -9,7 +9,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("katnr")]
-        public int Katnr { get; set; }
+        public int CategoryID { get; set; }
         [Column("id")]
         public int ID { get; set; }
         [Column("time", TypeName = "timestamp")]
@@ -17,7 +17,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("registrator")]
         public int? Registrator { get; set; }
         [Column("daysinfo"), StringLength(50)]
-        public string Daysinfo { get; set; }
+        public string DaysInfo { get; set; }
         [Column("approved")]
         public int Approved { get; set; }
         [Column("comment", TypeName = "text")]

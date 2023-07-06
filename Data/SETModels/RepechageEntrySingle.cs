@@ -11,18 +11,18 @@ namespace KSIMonitor.Data.SETModels {
         [Column("nnr")]
         public int NameID { get; set; }
         [Column("fieldpos")]
-        public int Fieldpos { get; set; }
+        public int FieldPos { get; set; }
         [Column("trostrunde")]
-        public int Trostrunde { get; set; }
+        public int Repechage { get; set; }
         [Column("points")]
         public int? Points { get; set; }
         [Column("kata")]
         public int? Kata { get; set; }
         [Column("matchid"), StringLength(50)]
-        public string Matchid { get; set; }
+        public string MatchID { get; set; }
         [Column("matchtime", TypeName = "timestamp")]
-        public DateTime Matchtime { get; set; }
+        public DateTime MatchTime { get; set; }
         [Column("wintype")]
-        public int? Wintype { get; set; }
+        public int? WinType { get; set; }
     }
 }

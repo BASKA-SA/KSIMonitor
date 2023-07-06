@@ -10,7 +10,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("title"), Required, StringLength(255)]
         public string Title { get; set; }
         [Column("url"), Required, StringLength(255)]
-        public string Url { get; set; }
+        public string URL { get; set; }
         [Column("description", TypeName = "text")]
         public string Description { get; set; }
     }

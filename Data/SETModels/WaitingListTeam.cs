@@ -13,7 +13,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vereinnr")]
         public int AssociationID { get; set; }
         [Column("mannschaft", TypeName = "text"), Required]
-        public string Mannschaft { get; set; }
+        public string Team { get; set; }
         [Column("time", TypeName = "timestamp")]
         public DateTime Time { get; set; }
         [Column("registrator")]

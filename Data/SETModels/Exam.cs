@@ -4,25 +4,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace KSIMonitor.Data.SETModels {
     [Table("exam")]
     public partial class Exam {
+        [Column("vernr")]
+        public int EventID { get; set; }
         [Column("id"), Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("title"), Required, StringLength(255)]
         public string Title { get; set; }
         [Column("theoreticalexam")]
-        public int Theoreticalexam { get; set; }
+        public int TheoreticalExam { get; set; }
         [Column("tewronganswers", TypeName = "text")]
-        public string Tewronganswers { get; set; }
-        [Column("practicalexam")]
-        public int Practicalexam { get; set; }
-        [Column("pecriterias", TypeName = "text")]
-        public string Pecriterias { get; set; }
+        public string TeWrongAnswers { get; set; }
         [Column("tepercentage")]
-        public int? Tepercentage { get; set; }
-        [Column("passmark")]
-        public int Passmark { get; set; }
+        public int? TePercentage { get; set; }
+        [Column("practicalexam")]
+        public int PracticalExam { get; set; }
+        [Column("pecriterias", TypeName = "text")]
+        public string PeCriterias { get; set; }
         [Column("pecriteriasmax")]
-        public int? Pecriteriasmax { get; set; }
-        [Column("vernr")]
-        public int EventID { get; set; }
+        public int? PeCriteriasMax { get; set; }
+        [Column("passmark")]
+        public int PassMark { get; set; }
     }
 }

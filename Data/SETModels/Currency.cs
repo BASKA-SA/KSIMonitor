@@ -5,8 +5,8 @@ namespace KSIMonitor.Data.SETModels {
     [Table("waehrung")]
     public partial class Currency {
         [Column("id"), Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         [Column("bezeichnung"), Required, StringLength(10)]
-        public string Bezeichnung { get; set; }
+        public string Name { get; set; }
     }
 }

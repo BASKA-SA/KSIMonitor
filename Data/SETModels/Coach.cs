@@ -10,21 +10,21 @@ namespace KSIMonitor.Data.SETModels {
         [Column("titel"), StringLength(50)]
         public string Title { get; set; }
         [Column("vorname"), Required, StringLength(255)]
-        public string Vorname { get; set; }
+        public string FirstName { get; set; }
         [Column("nachname"), Required, StringLength(255)]
-        public string Nachname { get; set; }
+        public string LastName { get; set; }
         [Column("geburt", TypeName = "date")]
-        public DateTime Geburt { get; set; }
+        public DateTime BirthDate { get; set; }
         [Column("sichtbar")]
-        public int Sichtbar { get; set; }
+        public int Visible { get; set; }
         [Column("kyu")]
         public int? Kyu { get; set; }
         [Column("dan")]
         public int? Dan { get; set; }
         [Column("sonstiges", TypeName = "text")]
-        public string Sonstiges { get; set; }
+        public string Misc { get; set; }
         [Column("geschlecht"), Required, StringLength(1)]
-        public string Geschlecht { get; set; }
+        public string Gender { get; set; }
         [Column("vereinnr")]
         public int AssociationID { get; set; }
         [Column("email"), StringLength(255)]

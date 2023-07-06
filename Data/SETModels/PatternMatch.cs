@@ -9,7 +9,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("title"), Required, StringLength(255)]
         public string Title { get; set; }
         [Column("regexstring"), Required, StringLength(255)]
-        public string Regexstring { get; set; }
+        public string RegexString { get; set; }
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("kata", TypeName = "text"), Required]

@@ -15,24 +15,24 @@ namespace KSIMonitor.Data.SETModels {
         [Column("registrator")]
         public int? Registrator { get; set; }
         [Column("daysinfo"), StringLength(50)]
-        public string Daysinfo { get; set; }
+        public string DaysInfo { get; set; }
         [Column("catid")]
         public int? CatID { get; set; }
-        [Column("checkok")]
-        public int? Checkok { get; set; }
-        [Column("checkcom", TypeName = "text")]
-        public string Checkcom { get; set; }
         [Column("accprinted")]
-        public int Accprinted { get; set; }
+        public int AccPrinted { get; set; }
         [Column("accprintedtime", TypeName = "timestamp")]
-        public DateTime? Accprintedtime { get; set; }
+        public DateTime? AccPrintedTime { get; set; }
         [Column("acccustom"), StringLength(255)]
-        public string Acccustom { get; set; }
+        public string AccCustom { get; set; }
+        [Column("checkok")]
+        public int? CheckOK { get; set; }
         [Column("checkok2")]
-        public int? Checkok2 { get; set; }
+        public int? CheckOK2 { get; set; }
+        [Column("checkcom", TypeName = "text")]
+        public string CheckCom { get; set; }
         [Column("checkcom2", TypeName = "text")]
-        public string Checkcom2 { get; set; }
+        public string CheckCom2 { get; set; }
         [Column("checkcom3", TypeName = "text")]
-        public string Checkcom3 { get; set; }
+        public string CheckCom3 { get; set; }
     }
 }

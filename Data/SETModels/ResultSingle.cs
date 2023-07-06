@@ -12,11 +12,11 @@ namespace KSIMonitor.Data.SETModels {
         [Column("nnr")]
         public int NameID { get; set; }
         [Column("erg")]
-        public int Erg { get; set; }
+        public int Result { get; set; }
         [Column("done")]
         public int? Done { get; set; }
         [Column("ergreal")]
-        public int Ergreal { get; set; }
+        public int ResultReal { get; set; }
         [Column("comment"), StringLength(255)]
         public string Comment { get; set; }
     }

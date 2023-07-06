@@ -9,76 +9,76 @@ namespace KSIMonitor.Data.SETModels {
         [Column("model")]
         public int Model { get; set; }
         [Column("verid")]
-        public int VerID { get; set; }
+        public int EventID { get; set; }
         [Column("discountentry")]
-        public int Discountentry { get; set; }
+        public int DiscountEntry { get; set; }
         [Column("discount")]
         public float Discount { get; set; }
         [Column("maxclub")]
-        public float Maxclub { get; set; }
+        public float MaxClub { get; set; }
         [Column("enablediscount")]
-        public int Enablediscount { get; set; }
+        public int EnableDiscount { get; set; }
         [Column("enablemaxclub")]
-        public int Enablemaxclub { get; set; }
+        public int EnableMaxClub { get; set; }
         [Column("indentrydiscounttype")]
-        public int Indentrydiscounttype { get; set; }
+        public int IndividualEntryDiscountType { get; set; }
         [Column("discountflat")]
-        public float Discountflat { get; set; }
+        public float DiscountFlat { get; set; }
         [Column("discountcatflat", TypeName = "text")]
-        public string Discountcatflat { get; set; }
+        public string DiscountCategoryFlat { get; set; }
         [Column("coachfee")]
-        public float Coachfee { get; set; }
+        public float CoachFee { get; set; }
         [Column("dateentryfee")]
-        public int Dateentryfee { get; set; }
+        public int DateEntryFee { get; set; }
         [Column("datecatentryfeecoach", TypeName = "text")]
-        public string Datecatentryfeecoach { get; set; }
+        public string DateCatEntryFeeCoach { get; set; }
         [Column("datecatentryfeeind", TypeName = "text")]
-        public string Datecatentryfeeind { get; set; }
+        public string DateCatEntryFeeIndividual { get; set; }
         [Column("datecatentryfeeteam", TypeName = "text")]
-        public string Datecatentryfeeteam { get; set; }
+        public string DateCatEntryFeeTeam { get; set; }
         [Column("feeigonrediscount", TypeName = "text")]
-        public string Feeigonrediscount { get; set; }
+        public string FeeIgnoreDiscount { get; set; }
         [Column("refereefee")]
-        public float Refereefee { get; set; }
+        public float RefereeFee { get; set; }
         [Column("officialfee")]
-        public float Officialfee { get; set; }
+        public float OfficialFee { get; set; }
         [Column("datecatentryfeereferee", TypeName = "text")]
-        public string Datecatentryfeereferee { get; set; }
+        public string DateCatEntryFeeReferee { get; set; }
         [Column("datecatentryfeeofficial", TypeName = "text")]
-        public string Datecatentryfeeofficial { get; set; }
+        public string DateCatEntryFeeOfficial { get; set; }
         [Column("nosportsidextrafee")]
-        public float Nosportsidextrafee { get; set; }
+        public float NoSportsIDExtraFee { get; set; }
         [Column("enablediscountteam")]
-        public int Enablediscountteam { get; set; }
+        public int EnableDiscountTeam { get; set; }
         [Column("discountentryteam")]
-        public int Discountentryteam { get; set; }
+        public int DiscountEntryTeam { get; set; }
         [Column("indentrydiscounttypeteam")]
-        public int Indentrydiscounttypeteam { get; set; }
+        public int IndividualEntryDiscountTypeTeam { get; set; }
         [Column("discountteam")]
-        public float Discountteam { get; set; }
+        public float DiscountTeam { get; set; }
         [Column("discountflatteam")]
-        public float Discountflatteam { get; set; }
+        public float DiscountFlatTeam { get; set; }
         [Column("discountcatflatteam", TypeName = "text")]
-        public string Discountcatflatteam { get; set; }
+        public string DiscountCatFlatTeam { get; set; }
         [Column("clubfee")]
-        public float Clubfee { get; set; }
+        public float ClubFee { get; set; }
         [Column("teamentryfeepercompetitor")]
-        public int Teamentryfeepercompetitor { get; set; }
+        public int TeamEntryFeePerCompetitor { get; set; }
         [Column("includealldiscount")]
-        public int? Includealldiscount { get; set; }
+        public int? IncludeAllDiscount { get; set; }
         [Column("includealldiscountteam")]
-        public int? Includealldiscountteam { get; set; }
+        public int? IncludeAllDiscountTeam { get; set; }
         [Column("dateentryfeewl")]
-        public int? Dateentryfeewl { get; set; }
+        public int? DateEntryFeeWL { get; set; }
         [Column("binomiosamecode")]
-        public int? Binomiosamecode { get; set; }
+        public int? BinomioSameCode { get; set; }
         [Column("binomioageflatfeeenable")]
-        public int? Binomioageflatfeeenable { get; set; }
+        public int? BinomioAgeFlatFeeEnable { get; set; }
         [Column("binomioageflatfee")]
-        public float? Binomioageflatfee { get; set; }
+        public float? BinomioAgeFlatFee { get; set; }
         [Column("binomioageflatfeeage")]
-        public int? Binomioageflatfeeage { get; set; }
+        public int? BinomioAgeFlatFeeAge { get; set; }
         [Column("customdescription", TypeName = "text")]
-        public string Customdescription { get; set; }
+        public string CustomDescription { get; set; }
     }
 }

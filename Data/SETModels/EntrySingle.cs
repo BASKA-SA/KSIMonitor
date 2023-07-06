@@ -9,7 +9,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("katnr")]
-        public int Katnr { get; set; }
+        public int CategoryID { get; set; }
         [Column("nnr")]
         public int NameID { get; set; }
         [Column("gesetzt")]
@@ -18,25 +18,25 @@ namespace KSIMonitor.Data.SETModels {
         public DateTime Time { get; set; }
         [Column("registrator")]
         public int? Registrator { get; set; }
-        [Column("checkok")]
-        public int? Checkok { get; set; }
-        [Column("checkcom", TypeName = "text")]
-        public string Checkcom { get; set; }
-        [Column("checkokentry")]
-        public int? Checkokentry { get; set; }
-        [Column("checkcomentry", TypeName = "text")]
-        public string Checkcomentry { get; set; }
         [Column("measurement")]
         public float? Measurement { get; set; }
         [Column("accprinted")]
-        public int Accprinted { get; set; }
+        public int AccPrinted { get; set; }
         [Column("accprintedtime", TypeName = "timestamp")]
-        public DateTime? Accprintedtime { get; set; }
+        public DateTime? AccPrintedTime { get; set; }
         [Column("acccustom"), StringLength(255)]
-        public string Acccustom { get; set; }
+        public string AccCustom { get; set; }
         [Column("regdob", TypeName = "date")]
-        public DateTime? Regdob { get; set; }
+        public DateTime? RegDateOfBirth { get; set; }
+        [Column("checkok")]
+        public int? CheckOK { get; set; }
         [Column("checkokmedical")]
-        public int? Checkokmedical { get; set; }
+        public int? CheckOKMedical { get; set; }
+        [Column("checkokentry")]
+        public int? CheckOKEntry { get; set; }
+        [Column("checkcom", TypeName = "text")]
+        public string CheckCom { get; set; }
+        [Column("checkcomentry", TypeName = "text")]
+        public string CheckComEntry { get; set; }
     }
 }

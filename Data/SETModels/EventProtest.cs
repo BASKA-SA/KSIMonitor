@@ -8,19 +8,19 @@ namespace KSIMonitor.Data.SETModels {
     public partial class EventProtest {
         [Column("vernr")]
         public int EventID { get; set; }
-        [Column("id")]
-        public int Id { get; set; }
-        [Column("creation", TypeName = "timestamp")]
-        public DateTime Creation { get; set; }
-        [Column("ringname"), StringLength(100)]
-        public string Ringname { get; set; }
+        [Column("catid")]
+        public int? CategoryID { get; set; }
         [Column("matchid"), StringLength(50)]
         public string MatchID { get; set; }
+        [Column("id")]
+        public int ID { get; set; }
+        [Column("creation", TypeName = "timestamp")]
+        public DateTime Created { get; set; }
+        [Column("ringname"), StringLength(100)]
+        public string RingName { get; set; }
         [Column("seconds")]
         public int Seconds { get; set; }
         [Column("athnnr")]
-        public int? Athnnr { get; set; }
-        [Column("catid")]
-        public int? CatID { get; set; }
+        public int? AthnID { get; set; }
     }
 }

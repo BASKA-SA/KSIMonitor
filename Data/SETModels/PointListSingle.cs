@@ -11,7 +11,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("nnr")]
         public int NameID { get; set; }
         [Column("fieldpos")]
-        public int Fieldpos { get; set; }
+        public int FieldPos { get; set; }
         [Column("pool")]
         public int Pool { get; set; }
         [Column("s1")]
@@ -33,7 +33,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("extra")]
         public float? Extra { get; set; }
         [Column("generatedfromcat")]
-        public int Generatedfromcat { get; set; }
+        public int GeneratedFromCategory { get; set; }
         [Column("sothers", TypeName = "text")]
         public string Sothers { get; set; }
     }

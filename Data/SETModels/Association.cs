@@ -13,11 +13,11 @@ namespace KSIMonitor.Data.SETModels {
         [Column("lvnr")]
         public int? Lvnr { get; set; }
         [Column("sektionnr")]
-        public int? Sektionnr { get; set; }
+        public int? SektionID { get; set; }
         [Column("stpktnr")]
-        public int? Stpktnr { get; set; }
+        public int? StpktID { get; set; }
         [Column("createdbymanager")]
-        public int? Createdbymanager { get; set; }
+        public int? CreatedByManager { get; set; }
         [Column("website"), StringLength(255)]
         public string Website { get; set; }
         [Column("nationalid"), StringLength(30)]
@@ -29,7 +29,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("nataccountid"), StringLength(30)]
         public string NataccountID { get; set; }
         [Column("teamtype")]
-        public int? Teamtype { get; set; }
+        public int? TeamType { get; set; }
         [Column("taxid"), StringLength(100)]
         public string TaxID { get; set; }
         [Column("address"), StringLength(255)]

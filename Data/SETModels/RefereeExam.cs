@@ -7,12 +7,12 @@ namespace KSIMonitor.Data.SETModels {
         [Column("vernr")]
         public int EventID { get; set; }
         [Column("refid")]
-        public int Refid { get; set; }
+        public int RefereeID { get; set; }
         [Column("examid")]
-        public int Examid { get; set; }
+        public int ExamID { get; set; }
         [Column("isexaminer")]
-        public int Isexaminer { get; set; }
+        public int IsExaminer { get; set; }
         [Column("eventcount")]
-        public int? Eventcount { get; set; }
+        public int? EventCount { get; set; }
     }
 }

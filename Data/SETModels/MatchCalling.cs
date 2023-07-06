@@ -9,41 +9,41 @@ namespace KSIMonitor.Data.SETModels {
         [Column("eventid")]
         public int EventID { get; set; }
         [Column("matchnumber")]
-        public int Matchnumber { get; set; }
+        public int MatchNumber { get; set; }
         [Column("catid")]
-        public int CatID { get; set; }
+        public int CategoryID { get; set; }
         [Column("pool")]
         public int Pool { get; set; }
         [Column("fieldpos")]
-        public int Fieldpos { get; set; }
+        public int FieldPos { get; set; }
         [Column("fieldposold")]
-        public int Fieldposold { get; set; }
+        public int FieldPosOld { get; set; }
         [Column("round")]
         public int Round { get; set; }
         [Column("catmatchnumber")]
-        public int? Catmatchnumber { get; set; }
+        public int? CategoryMatchNumber { get; set; }
         [Column("tabletype")]
-        public int Tabletype { get; set; }
+        public int TableType { get; set; }
         [Column("callmatch")]
-        public int Callmatch { get; set; }
+        public int CallMatch { get; set; }
+        [Column("callmatch2")]
+        public int? CallMatch2 { get; set; }
         [Column("hidematch")]
-        public int Hidematch { get; set; }
+        public int HideMatch { get; set; }
         [Column("calltime", TypeName = "timestamp")]
-        public DateTime? Calltime { get; set; }
+        public DateTime? CallTime { get; set; }
+        [Column("calltime2", TypeName = "timestamp")]
+        public DateTime? CallTime2 { get; set; }
+        [Column("showuptime", TypeName = "timestamp")]
+        public DateTime? ShowUpTime { get; set; }
+        [Column("showuptime2", TypeName = "timestamp")]
+        public DateTime? ShowUpTime2 { get; set; }
         [Column("name1", TypeName = "text")]
         public string Name1 { get; set; }
         [Column("name2", TypeName = "text")]
         public string Name2 { get; set; }
-        [Column("calltime2", TypeName = "timestamp")]
-        public DateTime? Calltime2 { get; set; }
-        [Column("callmatch2")]
-        public int? Callmatch2 { get; set; }
-        [Column("showuptime", TypeName = "timestamp")]
-        public DateTime? Showuptime { get; set; }
-        [Column("showuptime2", TypeName = "timestamp")]
-        public DateTime? Showuptime2 { get; set; }
         [Column("matchnumber_show")]
-        public int? MatchnumberShow { get; set; }
+        public int? MatchNumberShow { get; set; }
         [Column("ring")]
         public int? Ring { get; set; }
         [Column("winner")]
@@ -53,6 +53,6 @@ namespace KSIMonitor.Data.SETModels {
         [Column("result"), StringLength(15)]
         public string Result { get; set; }
         [Column("matchfromprinted")]
-        public int Matchfromprinted { get; set; }
+        public int MatchFromPrinted { get; set; }
     }
 }

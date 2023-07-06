@@ -16,7 +16,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("knr")]
         public int CategoryID { get; set; }
         [Column("catname", TypeName = "text")]
-        public string Catname { get; set; }
+        public string CategoryName { get; set; }
         [Column("sex"), Required, StringLength(1)]
         public string Sex { get; set; }
         [Column("type")]
@@ -30,18 +30,18 @@ namespace KSIMonitor.Data.SETModels {
         [Column("entries")]
         public int Entries { get; set; }
         [Column("fighttime")]
-        public int Fighttime { get; set; }
+        public int FightTime { get; set; }
         [Column("edited")]
         public int Edited { get; set; }
         [Column("color"), Required, StringLength(7)]
         public string Color { get; set; }
         [Column("starttime", TypeName = "timestamp")]
-        public DateTime Starttime { get; set; }
+        public DateTime StartTime { get; set; }
         [Column("endtime", TypeName = "timestamp")]
-        public DateTime Endtime { get; set; }
+        public DateTime EndTime { get; set; }
         [Column("comment"), StringLength(255)]
         public string Comment { get; set; }
         [Column("matchnumber")]
-        public int Matchnumber { get; set; }
+        public int MatchNumber { get; set; }
     }
 }
