@@ -1,0 +1,31 @@
+@model (List<dynamic> Items, Type Type)
+@{
+    ViewData["Title"] = "Table Explorer";
+
+    var properties = Model.Type.GetProperties();
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>
+    <a class="btn btn-primary" asp-action="Index">BACK</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @foreach (var property in properties) {
+                <th>@property.Name</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items) {
+            <tr>
+                @foreach (var property in properties) {
+                    <td>
+                        @property.GetValue(item)
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

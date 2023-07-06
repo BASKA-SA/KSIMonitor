@@ -21,5 +21,17 @@ namespace KSIMonitor.Controllers {
             var tables = setContext.GetType().GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly);
             return View(tables.Select(t => t.Name));
         }
+
+        public async Task<IActionResult> Table(string name) {
+            if (string.IsNullOrWhiteSpace(name))
+                return NotFound();
+
+            var tablePropertyInfo = setContext.GetType().GetProperty(name);
+            if (tablePropertyInfo == null)
+                return NotFound();
+
+            var table = (IQueryable<dynamic>)tablePropertyInfo.GetValue(setContext);
+            return View((Items: await table.ToListAsync(), Type: table.GetType().GenericTypeArguments.First()));
+        }
     }
 }
