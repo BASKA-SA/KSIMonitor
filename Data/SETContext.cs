@@ -173,7 +173,7 @@ namespace KSIMonitor.Data {
             modelBuilder.Entity<Category>(entity => {
                 entity.HasKey(e => e.CategoryID).HasName("PRIMARY");
                 entity.Property(e => e.Gender).IsFixedLength();
-                entity.Property(e => e.Katbez).HasDefaultValueSql("''");
+                entity.Property(e => e.Description).HasDefaultValueSql("''");
                 entity.Property(e => e.Team).IsFixedLength();
                 entity.Property(e => e.Type).HasDefaultValueSql("'1'");
             });
@@ -211,7 +211,7 @@ namespace KSIMonitor.Data {
                 entity.Property(e => e.Gender).IsFixedLength();
                 entity.Property(e => e.IsNoHuman).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Kyu).HasDefaultValueSql("'0'");
-                entity.Property(e => e.Name1).HasDefaultValueSql("''");
+                entity.Property(e => e.Name_).HasDefaultValueSql("''");
                 entity.Property(e => e.NationID).HasDefaultValueSql("'0'");
                 entity.Property(e => e.Visible).HasDefaultValueSql("'1'");
                 entity.Property(e => e.StpktID).HasDefaultValueSql("'0'");

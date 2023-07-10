@@ -8,7 +8,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("nnr"), Key]
         public int NameID { get; set; }
         [Column("name"), Required, StringLength(255)]
-        public string Name1 { get; set; }
+        public string Name_ { get; set; }
         [Column("geburt", TypeName = "date")]
         public DateTime BirthDate { get; set; }
         [Column("vereinnr")]

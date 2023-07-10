@@ -7,7 +7,7 @@ namespace KSIMonitor.Data.SETModels {
         [Column("knr"), Key]
         public int CategoryID { get; set; }
         [Column("katbez"), Required, StringLength(255)]
-        public string Katbez { get; set; }
+        public string Description { get; set; }
         [Column("alterVon")]
         public int AgeFrom { get; set; }
         [Column("alternichtmehr")]
